@@ -1,2 +1,2 @@
-# my_miniApps_project
- My project MINI APPS series
+# photograph
+摄影平台
