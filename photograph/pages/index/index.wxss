@@ -1,21 +1,111 @@
 /**index.wxss**/
-.userinfo {
+
+.banner {
+  padding: 15rpx;
+  height: 400rpx;
+  background: url("/images/banner.png") no-repeat;
+  background-size: 100% auto;
   display: flex;
-  flex-direction: column;
+}
+
+.search {
+  padding: 0 20rpx;
+  flex: 5;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  opacity: 0.8;
+  height: 80rpx;
+  border-radius: 30px;
+}
+
+.search image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.search input {
+  flex: 1;
+  font: 30rpx/1 Helvetica, sans-serif;
+  color: #fff;
+}
+
+.searchPlaceholder {
+  font: 30rpx/1 Helvetica, sans-serif;
+  color: #767676;
+}
+
+.member {
+  margin-left: 15rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #000;
+  opacity: 0.8;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.member image {
+  width: 30rpx;
+  height: 30rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.theme {
+  margin-top: 60rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.theme>view:nth-child(1) {
+  text-align: center;
+}
+
+.theme>view:nth-child(1) image {
+  width: 35rpx;
+  height: 25rpx;
+}
+
+.theme>view:nth-child(1) text {
+  margin: 0 20rpx;
+  color: #bdbdbd;
+}
+
+.themeImg {
+  margin-top: 20rpx;
+}
+.themeImg image {
+  width:100%;
+}
+
+.hotCity {
+  margin-top: 40rpx;
+  padding: 20rpx;
+}
+
+.hotCity>view:nth-child(1) {
+  margin-top: 0;
+  text-align: center;
+  height: 40rpx;
+}
+
+.hotCity>view:nth-child(1) image {
+  width: 35rpx;
+  height: 25rpx;
+}
+
+.hotCity>view:nth-child(1) text {
+  margin: 0 20rpx;
+  color: #bdbdbd;
+}
+
+.hotCity>view {
+  margin-top: 25rpx;
+  width: 100%;
+  height: 230rpx;
+}
+
+.hotCity>view image {
+  width: 100%;
+  height: 100%;
 }

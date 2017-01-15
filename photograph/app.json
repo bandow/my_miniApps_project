@@ -3,12 +3,15 @@
     "pages/index/index",
     "pages/photograph/list",
     "pages/member/member",
+    "pages/member/login",
+    "pages/member/register",
+    "pages/member/forget",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#1B1A1F",
+    "navigationBarTitleText": "摄影平台",
+    "navigationBarTextStyle":"white"
   }
 }

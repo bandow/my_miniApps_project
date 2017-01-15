@@ -1,10 +1,41 @@
-<!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+  <!--banner begin-->
+  <view class="banner">
+    <view class="search">
+      <image src="{{srcSearch}}"></image>
+      <input placeholder-class="searchPlaceholder" placeholder="搜索主题/用户/城市…" />
+    </view>
+    <view class="member" bindTap="bindMemberTap">
+      <image src="{{srcMember}}"></image>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!--推荐主题 begin-->
+  <view class="theme">
+    <view>
+      <image src="{{srcTitleL}}"></image>
+      <text>推荐主题</text>
+      <image src="{{srcTitleR}}"></image>
+    </view>
+    <swiper bindtap="bindViewTap" class="themeImg" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!--热门城市 begin-->
+  <view class="hotCity">
+    <view>
+      <image src="{{srcTitleL}}"></image>
+      <text>热门城市</text>
+      <image src="{{srcTitleR}}"></image>
+    </view>
+    <view wx:for="{{imgArray}}" wx:for-item="item">
+      <image mode="{{item.mode}}" src="{{item.srcCityList}}"></image>
+    </view>
   </view>
 </view>

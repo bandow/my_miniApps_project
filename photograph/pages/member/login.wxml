@@ -1,0 +1,21 @@
+<view class="container" style="height:{{winHeight}}px">
+  <view class="title">
+    <text>WELCOME</text>
+    <text>HAO YA TU</text>
+  </view>
+  <form class="login">
+    <view>
+      <image src="{{srcPhoneIcon}}"></image>
+      <input placeholder-class="placeholderCss" type="tel" placeholder="请输入手机号" />
+    </view>
+    <view>
+      <image src="{{srcPasswordIcon}}"></image>
+      <input placeholder-class="placeholderCss" type="password" placeholder="请输入密码" />
+    </view>
+    <button catchtap="goMember">立即登录</button>
+  </form>
+  <view class="foot">
+    <text catchtap="goForget">忘记密码？</text>
+    <text catchtap="goRegister">注册账号</text>
+  </view>
+</view>

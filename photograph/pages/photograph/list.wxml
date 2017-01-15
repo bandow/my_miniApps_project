@@ -1,2 +1,10 @@
-<!--pages/photograph/list.wxml-->
-<text>pages/photograph/list.wxml</text>
+<view class="container">
+ <view class="list">
+   <image src="src"></image>
+   <view>
+   <view></view>
+     <image src="src"></image>
+
+   </view>
+ </view>
+</view>

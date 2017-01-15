@@ -1,0 +1,77 @@
+.container {
+  background: url("/images/login_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.title {
+  padding: 120rpx 0;
+}
+
+.title text {
+  display: block;
+  text-align: center;
+  font: 60rpx/1.2 Helvetica, sans-serif;
+  color: #fff;
+}
+
+.title text:nth-child(2) {
+  font-size: 40rpx;
+}
+
+.login {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login view {
+  padding: 0 25rpx;
+  height: 80rpx;
+  background-color: #000;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 20rpx;
+}
+
+.login view image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 25rpx;
+}
+
+.login view input {
+  font: 30rpx/1.2 Helvetica, sans-serif;
+  color: #fff;
+}
+
+.placeholderCss {
+  font: 30rpx/1.2 Helvetica, sans-serif;
+  color: #393939;
+}
+
+.login button {
+  margin: 60rpx 0;
+  background-color: #f7ac1d;
+  color: #fff;
+  font: 30rpx/80rpx Helvetica, sans-serif;
+}
+
+.foot {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.foot text {
+  flex: 1;
+  color: #b58502;
+  font: 26rpx/1.2 Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+.foot text:nth-child(2) {
+  text-align: right;
+}
