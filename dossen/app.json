@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/list",
+    "pages/order/item",
+    "pages/order/confirm",
+    "pages/order/success",
+    "pages/order/orderCoupon",
+    "pages/hotel/list",
+    "pages/hotel/index",
+    "pages/hotel/hotelcity",
+    "pages/hotel/item",
+    "pages/hotel/search",
+    "pages/member/member",
+    "pages/member/login",
+    "pages/member/PointDetail",
+    "pages/member/coupon",
+    "pages/member/breakfastCoupn",
+    "pages/member/settings",
+    "pages/common/service"
+  ]
+  ,"window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#da004b",
+    "navigationBarTitleText": "东呈酒店",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#da004b",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "订酒店",
+      "iconPath": "images/hotel_icon.png",
+      "selectedIconPath": "images/hotel_icon_active.png"
+    },{
+      "pagePath": "pages/order/list",
+      "text": "订单",
+      "iconPath": "images/order_icon.png",
+      "selectedIconPath": "images/order_icon_active.png"
+    },{
+      "pagePath": "pages/common/service",
+      "text": "客服",
+      "iconPath": "images/service_icon.png",
+      "selectedIconPath": "images/service_icon_active.png"
+    },{
+      "pagePath": "pages/member/member",
+      "text": "我的",
+      "iconPath": "images/member_icon.png",
+      "selectedIconPath": "images/member_icon_active.png"
+    }]
+  }
+}

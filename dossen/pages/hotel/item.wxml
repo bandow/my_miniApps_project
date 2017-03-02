@@ -1,0 +1,150 @@
+
+<!--pages/hotel/detailed.wxml-->
+<view class="container" wx:if="{{onloaded}}">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="carousel">
+    <block wx:for="{{hotel.Pictures}}">
+      <swiper-item>
+        <image src="{{file_url+item.ThumbnailUrl}}" class="slide-image" />
+      </swiper-item>
+    </block>
+    <view class="iconPhone" bindtap="makePhoneCall">
+      <image src="/images/icon_phone.png"></image>
+    </view>
+
+    <!--<view class="iconCollect"><image src="/images/icon_collect.png"></image></view>-->
+
+    <!--<text>{{hotel.Name}}</text>-->
+  </swiper>
+  <view class="address">
+    <view class="left">
+      <image class="imgL" src="/images/icon_location.png"></image>
+    </view>
+    <view class="right">
+      <text class="addressText">{{hotel.Address}}</text>
+
+      <!--<text>距越秀公园地铁站4公里,打车约10分钟</text>-->
+    </view>
+  </view>
+  <view class="info">
+    <block wx:if="{{hasWifi}}">
+      <view>
+        <image src="/images/icon_wifi.png"></image>
+        <text>免费wifi</text>
+      </view>
+    </block>
+    <block wx:if="{{hasBreakfast}}">
+      <view>
+        <image src="/images/icon_park.png"></image>
+        <text>停车场</text>
+      </view>
+    </block>
+    <block wx:if="{{hasParkingLot}}">
+      <view>
+        <image src="/images/icon_food.png"></image>
+        <text>早餐</text>
+      </view>
+    </block>
+
+    <!--<view><text>详情</text></view>-->
+  </view>
+
+  <!--日历 begin-->
+  <picker mode="date" value="{{date}}" start="{{minDate}}" end="{{maxDate}}" bindchange="bindDateChange">
+    <view class="tiemDate">
+      <view class="tiemL">
+        <image class="imgL" src="/images/icon_date.png"></image>
+      </view>
+      <view class="tiemM">
+        <view class="lTime">
+          <text>入住</text>
+          <view>
+            <text class="picker">{{startDate}}</text>
+            <text>{{startDateDesc}}</text>
+          </view>
+        </view>
+        <view class="cTime"></view>
+        <view class="rTime">
+          <text>离店</text>
+          <view>
+            <text>{{endDate}}</text>
+            <text>{{endDateDesc}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="tiemR">
+        <text>共{{numDay}}晚</text>
+      </view>
+    </view>
+  </picker>
+
+  <!--日历 end-->
+  <view class="roomList" wx:for="{{hotel.HotelRoomTypes}}" wx:for-item="item">
+    <view class="{{item.display?'roomListTop roomListTopActive':'roomListTop'}}" data-index="{{index}}" bindtap="roomListTap">
+      <view>
+        <image src="{{file_url+item.ThumbnailUrl}}"></image>
+      </view>
+      <view>
+        <text>{{item.RoomTypeName}}</text>
+        <view>
+          <!--<picker mode="date" value="{{date}}" start="{{minDate}}" end="{{maxDate}}" bindchange="bindDateChange">-->
+          <text>{{item.BedDesc}}</text>          
+          <text>{{item.AreaDesc}}</text>
+          <text>{{item.WindowDesc}}</text>
+        </view>
+      </view>
+      <view>￥
+        <text>{{item.lowestPrice}}</text>
+        <text>起</text>
+      </view>
+    </view>
+    <block wx:for="{{item.HotelRoomStates}}" wx:for-item="hotelRoomState">
+      <block wx:if="{{hotelRoomState.BookType=='NS'&&(hotelRoomState.ActivityCode==null||hotelRoomState.ActivityCode=='')}}">
+        <dl class="{{item.display?'roomListFoot show':'roomListFoot hide'}}">
+          <dd>
+            <view>
+              <text>{{hotelRoomState.Name}}</text>
+              <view>
+                <block wx:for="{{hotelRoomState.MemberAssertTags}}" wx:for-item="tag" wx:for-index="idx">
+                  <text>{{tag.Key}}</text>
+                </block>
+              </view>
+            </view>
+            <view class="moneyList">
+              <view>
+                <block wx:if='{{hotelRoomState.FeeType=="RMB"}}'>￥</block>
+                <text>{{hotelRoomState.RoomFee}}</text>
+                <block wx:if='{{hotelRoomState.FeeType=="POINT"}}'>积分</block>
+              </view>
+              <block wx:if="{{hotelRoomState.UsableCount<10&&hotelRoomState.UsableCount>0}}">
+                <text class="lessThan">少于10间</text>
+              </block>
+            </view>
+            <block wx:if="{{hotelRoomState.UsableCount<=0}}">
+              <view style="background-color:#999999">
+                <text data-index="{{index}}">满房</text>
+              </view>
+            </block>
+            <block wx:else>
+              <view>
+                <text data-roomTypeId="{{item.RoomTypeId}}" data-activityCode="{{hotelRoomState.ActivityCode}}" data-bookType="{{hotelRoomState.BookType}}" data-roomTypeName="{{item.RoomTypeName}}" bindtap="orderConfirm">预订</text>
+              </view>
+            </block>
+          </dd>
+        </dl>
+      </block>
+    </block>
+  </view>
+</view>
+<view class="{{maskContainer?'mask':'mask maskActive'}}" bindtap="maskTap"></view>
+<view class="{{maskDayContainer?'maskDay':'maskDay maskDayActive'}}">
+  <text>预订房间数</text>
+  <text bindtap="selectDayNum" data-day="1">1晚</text>
+  <text bindtap="selectDayNum" data-day="2">2晚</text>
+  <text bindtap="selectDayNum" data-day="3">3晚</text>
+  <text bindtap="selectDayNum" data-day="4">4晚</text>
+  <text bindtap="selectDayNum" data-day="5">5晚</text>
+  <text bindtap="selectDayNum" data-day="6">6晚</text>
+  <text bindtap="selectDayNum" data-day="7">7晚</text>
+  <text bindtap="selectDayNum" data-day="8">8晚</text>
+  <text bindtap="selectDayNum" data-day="9">9晚</text>
+</view>

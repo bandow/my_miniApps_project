@@ -1,0 +1,31 @@
+<!--pages/member/login.wxml-->
+<view class="container" wx:if="{{onload}}">
+<!--<view class="container">-->
+  <view class="login">
+    <text class="title">使用手机号登录</text>
+    <text class="{{pointOut?'pointOut':'pointOut show'}}">接收短信大约需要54秒</text>
+    <view class="loginSubmit">
+      <form class="formSubmit" bindsubmit="formBindsubmit">
+        <view>
+          <text>手机号</text>
+          <input bindinput="bindKeyInput1" value="{{value}}" name="userName" placeholder="请填写手机号码" />
+          <image bindtap="closeTap" class="{{close1?'':'show'}}" src="{{loginClose}}"></image>
+        </view>
+        <view class="{{password?'password':'password hide'}}">
+          <text>密码</text>
+          <input bindinput="bindKeyInput2" value="{{valuepsw}}" name="psw" placeholder="请填写密码" password="true" />
+          <image  bindtap="closeTap2" class="{{close2?'':'show'}}" src="{{loginClose}}"></image>
+        </view>
+        <view class="{{code?'code':'code show'}}">
+          <text>验证码</text>
+          <input name="checkCode" placeholder="请输入验证码" />
+          <text class="gain" bindtap="getCheckCode">{{checkCodeTips}}</text>
+        </view>
+        <button formType="submit">登录</button>
+      </form>
+    </view>
+    <view class="{{forget?'forget':'forget hide'}}">忘记密码或无账号，使用
+      <text bindtap="infoTap">短信登录</text>
+    </view>
+  </view>
+</view>

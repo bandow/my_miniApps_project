@@ -1,0 +1,209 @@
+/* pages/order/item.wxss */
+
+/*orderinfo.wxss*/
+
+/*.container {
+  padding-bottom: 100rpx;
+}*/
+
+.block1 {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 25rpx;
+}
+
+.block1-1 {
+  display: flex;
+  align-items: center;
+}
+
+.block1 image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.block1-1 text {
+  flex: 1;
+  margin-left: 25rpx;
+  font: 36rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.block1-2 {
+  margin-top: 20rpx;
+}
+
+.block1-2 text {
+  font: 24rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #98b98a;
+  padding: 5rpx 20rpx;
+  border-radius: 50rpx;
+  color: #98b98a;
+  margin-right: 20rpx;
+}
+
+.block2 {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 25rpx;
+}
+
+.block2-1 {
+  position: relative;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 20rpx;
+}
+
+/*.block2-1:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #ccc;
+  transform: rotateZ(135deg);
+}*/
+
+.block2-1 text {
+  display: block;
+  font: 34rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.block2-1 text:nth-child(2) {
+  font: 25rpx "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  margin-top: 15rpx;
+  color: #999;
+}
+
+.block2-2 {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.block2-2>view {
+  padding: 0 50rpx 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #eee;
+}
+
+.block2-2>view:last-child {
+  border-right: none;
+}
+
+.block2-2>view image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.block2-2>view text {
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.block3 {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 25rpx;
+}
+
+.block3 text:nth-child(1) {
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  margin-bottom: 10rpx;
+}
+
+.block3 .text1 {
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #999;
+  flex: 1;
+  display: flex;
+}
+
+.block3 .text1 text:nth-child(1) {
+  flex: 1;
+}
+
+.block3 .text1 text:nth-child(2) {
+  flex: 3;
+}
+
+.block4 {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 25rpx;
+}
+
+.block4 text:nth-child(1) {
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  margin-bottom: 10rpx;
+}
+
+.block4 .text1 {
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #999;
+  flex: 1;
+  display: flex;
+}
+
+.block4 .text1 text:nth-child(1) {
+  flex: 1;
+}
+
+.block4 .text1 text:nth-child(2) {
+  flex: 3;
+}
+
+.block5 {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 25rpx;
+}
+
+.block5 text:nth-child(1) {
+  display: block;
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.block5 text:nth-child(2) {
+  font: 30rpx "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #999;
+  flex: 1;
+}
+
+.block6 {
+  /*position:fixed;*/
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex: 0 0 100rpx;
+  box-sizing: border-box;
+}
+
+.block6 text {
+  display: flex;
+  font: 34rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.block6 text:nth-child(1) {
+  background-color: white;
+  flex: 1;
+}
+
+.block6 text:nth-child(2) {
+  background-color: #da004c;
+  flex: 1;
+  color: white;
+}

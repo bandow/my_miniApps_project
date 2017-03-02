@@ -1,0 +1,164 @@
+
+<!--pages/order/confirm.wxml-->
+<view class='container' wx:if="{{onshow}}">
+  <view class="confirmTop">
+    <view class="confirmContainer">
+      <text>{{hotelName}}</text>
+      <view class="containerLR">
+        <picker bindchange="bindDateChange" mode="date" value="{{startDate}}" start="{{minDate}}" end="{{maxDate}}">
+          <view>
+            <text>入住日期</text>
+          </view>
+          <view>
+            <view class="picker">
+              {{startDateDesc}}
+            </view>
+          </view>
+          <view>
+            <text>住{{dayNum}}晚</text>
+          </view>
+        </picker>
+        <view bindtap="changeRoomType">
+          <view>
+            <text>入住房型</text>
+          </view>
+          <view>
+            <text>{{roomTypeName}}</text>
+          </view>
+          <view>
+            <block wx:if="{{hasBreakfast}}">
+              <text>含早</text>
+            </block>
+            <block wx:else>
+              <text>无早</text>
+            </block>
+            <block wx:if="{{usableCoupon}}">
+              <text>优惠券</text>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--<view>
+      <text>{{hotelName}}</text>
+    </view>
+    <view>
+      <text>房型：</text>
+      <text>{{roomTypeName}}</text>
+    </view>
+    <view>
+      <text>入住时间：</text>
+      <text>{{startDate}}</text>
+      <text>至</text>
+      <text>{{endDate}}</text>
+    </view>-->
+  </view>
+  <view class="confirmMiddle">
+    <text>入住人信息</text>
+    <view class="roomSelect" bindtap="roomSelect">
+      <text>房间数</text>
+
+      <!--<button bindtap="roomNumSubtract">-</button>
+      <text class="roomNum">{{roomNum}}</text>
+      <button bindtap="roomNumAdd">+</button>-->
+      <text>{{roomNum}}</text>
+    </view>
+    <view>
+      <text>入住人</text>
+      <input type="text" id="userName" value="{{userName}}" placeholder-class="codePla" placeholder="请输入用户名" bindinput="guestNameChange" />
+    </view>
+    <view>
+      <text>手机号</text>
+      <input type="text" id="mobile" value="{{mobile}}" placeholder-class="codePla" placeholder="请输入手机号" bindinput="mobileChange" />
+    </view>
+    <view class="code" wx:if="{{papersNo}}">
+      <text>身份证号</text>
+      <input type="text" id="" value="" name="papersNo" placeholder-class="codePla" placeholder="请输入本人身份证号" bindinput="guestPapersNoChange" />
+      <image bindtap="codeImgTap" src="/images/icon_notice2.png"></image>
+    </view>
+    <block wx:if="{{usableCoupon}}">
+      <view class="selectCoupons" bindtap="selectCoupon">
+        <text>优惠劵</text>
+        <text>{{couponName==''?'请选择优惠券':couponName}}</text>
+
+        <!--<text>{{couponName}}</text>-->
+      </view>
+    </block>
+    <view class="price">
+      <view bindtap="priceLtap">
+        <text>订单总价：{{totalFee}}元</text>
+        <image src="/images/icon_price.png"></image>
+      </view>
+      <view bindtap="priceRtap">
+        <image src="/images/icon_notice.png"></image>
+        <text>下单须知</text>
+      </view>
+    </view>
+  </view>
+
+  <!--<view class="kindlyReminder">
+    <text>温馨提示：</text>
+    <text>1、预付房费,房间将为你整晚保留</text>
+    <text>2、电子优惠券使用后，如取消订单，变更日期及预订未到，电子优惠券不予返还；</text>
+    <text>3、酒店通常14:00办理入住，早到可能需要等待。如需在0:00-6:00入住，入住日期请选择前一天。例：12月18日3:00入住，应选择入住日期为12月17日。</text>
+  </view>-->
+
+  <!--<view class="{{detailList?'show detailList':'hide'}}" wx:for="{{dayPrices}}">
+    <view>
+      <text>{{item.BizDay}}</text>
+      <text>无早</text>
+      <text>{{item.RoomFee}}*{{roomNum}}</text>
+    </view>
+  </view>-->
+
+  <!--<view class="confirmFoot">
+    <text>总价:{{totalFee}}</text>
+    <text bindtap="lookDetail">查看明细</text>-->
+  <button bindtap="orderSubmit">提交</button>
+
+  <!--</view>-->
+
+  <!--<view class="notice">
+    <text>下单须知</text>
+    <image src="/images/icon_notice.png"></image>
+  </view>-->
+</view>
+<view class="{{detailList?'detailList':'show detailList'}}">
+  <block wx:for="{{dayPrices}}" wx:for-item="item">
+    <view>
+      <text>{{item.BizDay}}</text>
+      <text>
+        <block wx:if="hasBreakfast">含早</block>
+        <block wx:else>无早</block>
+      </text>
+      <text>￥{{item.RoomFee}}*{{roomNum}}</text>
+    </view>
+  </block>
+  <view wx:if="{{couponName!=''}}">
+    <text>优惠金额：￥{{couponFee}}</text>
+  </view>
+</view>
+<view class="{{maskContainer?'mask':'mask maskActive'}}" bindtap="maskTap"></view>
+<view class="{{maskRoomContainer?'maskRoom':'maskRoom maskRoomActive'}}">
+  <text>预订房间数</text>
+  <text bindtap="selectRoomNum" data-num="1">1间</text>
+  <text bindtap="selectRoomNum" data-num="2">2间</text>
+  <text bindtap="selectRoomNum" data-num="3">3间</text>
+</view>
+<view class="{{maskDayContainer?'maskDay':'maskDay maskDayActive'}}">
+  <text>预订间晚</text>
+  <text bindtap="selectDayNum" data-day="1">1晚</text>
+  <text bindtap="selectDayNum" data-day="2">2晚</text>
+  <text bindtap="selectDayNum" data-day="3">3晚</text>
+  <text bindtap="selectDayNum" data-day="4">4晚</text>
+  <text bindtap="selectDayNum" data-day="5">5晚</text>
+  <text bindtap="selectDayNum" data-day="6">6晚</text>
+  <text bindtap="selectDayNum" data-day="7">7晚</text>
+  <text bindtap="selectDayNum" data-day="8">8晚</text>
+  <text bindtap="selectDayNum" data-day="9">9晚</text>
+</view>
+<view class="{{maskPrompt?'maskPrompt':'maskPrompt maskPromptActive'}}">
+  <text>{{maskPromptTitle}}</text>
+  <text>{{maskPromptContent}}</text>
+</view>

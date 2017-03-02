@@ -1,0 +1,138 @@
+
+<!--pages/hotel/list.wxml-->
+
+<!--<template is="loading" data="{{ loading }}"/>-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="container" wx:if="{{onloaded}}">
+  <view class="{{mask?'show mask':'hidden'}}" catchtap="maskTap"></view>
+  <view class="hotelListHeader">
+
+    <!--选择城市搜索输入-->
+    <view class="head">
+      <view bindtap="selectCity">
+        <text>{{cityName}}</text>
+      </view>
+      <view>
+        <image src="/images/icon_search@2x.png"></image>
+
+        <!--输入目的地名称-->
+        <input bindfocus="selectDestination" bindinput="" placeholder-class="destination" placeholder="{{searchKeys}}" />
+      </view>
+    </view>
+
+    <!--列表一级标题-->
+    <view class="foot">
+      <picker bindchange="bindDateChange" mode="date" value="{{startDate}}" start="{{minDate}}" end="{{maxDate}}">
+        <view class="time">
+          <text>{{startDateDesc}}</text>
+          <text>(住{{dayNum}}晚)</text>
+        </view>
+      </picker>
+      <view class="{{list1?'list distance':'list distance red'}}" data-index="1" catchtap="selecListTap1">
+        <text>{{distancetext}}</text>
+      </view>
+      <view class="{{list2?'list area':'list area red'}}" data-index="2" catchtap="selecListTap2">
+        <text>{{areatext}}</text>
+      </view>
+      <view class="{{list3?'list select':'list select red'}}" data-index="3" catchtap="selecListTap3">
+        <text>{{selecttext}}</text>
+      </view>
+    </view>
+
+    <!--距离最近二级标题-->
+
+    <!--排序-->
+    <view class="{{distanceList?'show distanceList':'hidden'}}">
+      <ul>
+        <li class="{{item.display?'liRed':''}}" wx:for="{{SortArray}}" bindtap="resetSortFocus" data-name="{{item.Name}}" data-index='{{index}}' data-key="{{item.key}}">{{item.Name}}</li>
+      </ul>
+    </view>
+    <view class="{{selected2?'show areaList':'hidden'}}">
+      <scroll-view class="left" scroll-y="true">
+        <li class="{{areaListLi1?'liWhite':''}}" bindtap="liArea1">附近</li>
+        <!--<li class="{{areaListLi2?'liWhite':''}}" bindtap="liArea2">商圈</li>
+        <li class="{{areaListLi3?'liWhite':''}}" bindtap="liArea3">行政区</li>-->
+      </scroll-view>
+      <scroll-view class="{{right1?'show right':'hidden'}}" scroll-y="true">
+        <li class="{{item.display?'liRed':''}}" wx:for="{{NearByArray}}" bindtap="resetNearbyFocus" data-name="{{item.Name}}" data-index='{{index}}' data-key="{{item.key}}">{{item.Name}}</li>
+      </scroll-view>
+      <scroll-view class="{{right2?'show right':'hidden'}}" scroll-y="true">
+        <li class="{{item.display?'liRed':''}}" bindtap="tworightLi2" wx:for="{{BusinessList}}" data-key="{{item.Key}}" data-name="{{item.Key}}" data-index="{{index}}">{{item.Key}}</li>
+      </scroll-view>
+      <scroll-view class="{{right3?'show right':'hidden'}}" scroll-y="true">
+
+        <!--行政区循环-->
+        <li class="{{item.display?'liRed':''}}" bindtap="threerightLi2" wx:for="{{AreaList}}" data-key="{{item.Value}}" data-name="{{item.Key}}" data-index="{{index}}" data-value="{{item.value}}">{{item.Key}}</li>
+      </scroll-view>
+    </view>
+    <view class="{{selected3?'show selectList':'hidden'}}">
+      <scroll-view class="left" scroll-y="true">
+        <li class="{{areaListLi4?'liWhite':''}}" bindtap="liArea4">品牌</li>
+      </scroll-view>
+      <scroll-view class="{{right4?'show right':'hidden'}}" scroll-y="true">
+        <li class="{{item.display?'liRed':''}}" bindtap="resetBrandNameFocus" wx:for="{{BrandName}}" data-name="{{item.Name}}" data-index="{{index}}" data-key="{{item.key}}">
+          <image class="{{item.display?'hidden':'show'}}" src="{{item.logoIcon}}"></image>
+          <image class="{{item.display?'show':'hidden'}}" src="{{item.logoIconA}}"></image>
+          <text>{{item.Name}}</text>
+        </li>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!--酒店列表-->
+  <scroll-view class="page_bd">
+    <!--<view class="section" wx:for="{{hotelList}}" wx:for-item="item" bindtap="{{item.Status=='OPEN'?'':hotelInfo}}" data-hotelid="{{item.HotelId}}">-->
+    <block wx:if="{{hotelList.length>0}}">
+    <view class="section" wx:for="{{hotelList}}" wx:for-item="item" bindtap="hotelInfo" data-hotelid="{{item.HotelId}}" data-status="{{item.Status}}">
+      <view class="img">
+        <!--<image src="{{staticUrl+item.Pictures[0].ThumbnailUrl}}" mode="{{item.mode}}"></image>-->
+        <image src="{{item.Pictures[0]!=null?staticUrl+item.Pictures[0].ThumbnailUrl:staticUrl+'/wxapp/default_hotel_pic.png'}}" mode="{{item.mode}}"></image>
+      </view>
+      <view class="right">
+        <view class="name">{{item.Name}}</view>
+        <view class="gradeComment">
+          <view>
+            <text>{{item.Grade.Rate}}分</text>/{{item.CommentNum}}条评论
+          </view>
+          <image src="/images/icon_wifi_green.png"></image>
+          <image src="/images/icon_food_green.png"></image>
+          <image src="/images/icon_park_green.png"></image>
+        </view>
+        <view class="distance">
+          距您{{item.Distance}}km
+          <text>{{item.BusinessArea}}</text>
+        </view>
+      </view>
+      <view class="price" wx:if="{{item.Status=='OPEN'}}">
+        <text class="l">￥</text>
+        <text>{{item.LowestPrice}}</text>起
+      </view>
+      <view class="price" wx:else>
+        <text class="open">筹备中</text>
+      </view>
+    </view>
+   </block>
+   <block wx:else>
+   <view style="text-align:center">
+       <image src="/images/icon_blankpage_search@2x.png" style="width:100px;height:100px;margin-top:100px"></image>
+        </view>
+    <view style="text-align:center;margin-top:10px">
+       <text style="font-size:14px;color:#999999">暂无符合条件的酒店</text>
+    </view>
+  
+   </block>
+  </scroll-view>
+</view>
+<view class="{{maskContainer?'maskList':'maskList maskListActive'}}" bindtap="maskTap"></view>
+<view class="{{maskDayContainer?'maskDay':'maskDay maskDayActive'}}">
+  <text>预订房间数</text>
+  <text bindtap="selectDayNum" data-day="1">1晚</text>
+  <text bindtap="selectDayNum" data-day="2">2晚</text>
+  <text bindtap="selectDayNum" data-day="3">3晚</text>
+  <text bindtap="selectDayNum" data-day="4">4晚</text>
+  <text bindtap="selectDayNum" data-day="5">5晚</text>
+  <text bindtap="selectDayNum" data-day="6">6晚</text>
+  <text bindtap="selectDayNum" data-day="7">7晚</text>
+  <text bindtap="selectDayNum" data-day="8">8晚</text>
+  <text bindtap="selectDayNum" data-day="9">9晚</text>
+</view>

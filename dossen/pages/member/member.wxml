@@ -1,0 +1,43 @@
+
+<!--member.wxml-->
+<view class="container" wx:if="{{onloaded}}">
+  <view class="memberTop">
+    <view class="memberImg">
+      <image src="{{member.AvatarUrl==''?'/images/default_head.jpg':member.AvatarUrl}}"></image>
+    </view>
+    <view class="memberName">
+      <text>{{member.MemberName}}</text>
+    </view>
+    <view class="memberLevel">
+      <text>{{member.MemberLevel}}</text>
+    </view>
+    <view class="memberList">
+      <view bindtap="MemberCoupon">
+        <text class="">{{member.Nums[0].Num}}</text>
+        <text>优惠券</text>
+      </view>
+      <view bindtap="MemberPoint">
+        <text class="">{{member.MemberPoint}}</text>
+        <text>积分</text>
+      </view>
+      <view bindtap="MemberBreakfast">
+        <text class="">{{member.Nums[1].Num}}</text>
+        <text>早餐券</text>
+      </view>
+    </view>
+  </view>
+  <view class="memberFoot">
+    <view>
+      <text>我的服务</text>
+    </view>
+    <view catchtap="orderListTap">
+      <image src="/images/icon_member01.png"></image>
+      <text>酒店订单</text>
+    </view>
+    <view catchtap="mySettings">
+      <image src="/images/icon_member04.png"></image>
+      <!--<text>系统设置</text>-->
+      <text>切换账号</text>
+    </view>
+  </view>
+</view>

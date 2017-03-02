@@ -1,0 +1,467 @@
+/* pages/hotel/list.wxss */
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.hotelListHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  width: 100%;
+}
+
+.head {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+}
+
+.head view:nth-child(1) {
+  position: relative;
+  padding: 24rpx 0;
+  background-color: #fff;
+  margin-right: 10rpx;
+  border-radius: 5px;
+  width: 200rpx;
+}
+
+.head view:nth-child(1):before {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8rpx solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+.head view:nth-child(1) text {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+  text-align: center;
+  display: block;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.head view:nth-child(2) {
+  padding: 12.5rpx 25rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.head view:nth-child(2) image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.head view:nth-child(2) input {
+  background-color: #fff;
+  border-radius: 5px;
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.destination {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #ccc;
+}
+
+.foot {
+  padding:10rpx 3%;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.foot .time {
+   position: relative;
+  flex: 1.5;
+  padding-right:40rpx;
+  font: 24rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border-right: 1px solid #eee;
+}
+.foot .time:before {
+  position: absolute;
+  top: 50%;
+  right:10%;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8rpx solid;
+  border-color: #999 transparent transparent transparent;
+}
+
+.foot .time text {
+  display: block;
+}
+
+.foot .list {
+  position: relative;
+}
+
+.foot .list:before {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8rpx solid;
+  border-color: #999 transparent transparent transparent;
+}
+
+.foot .list text {
+  display: block;
+  font: 30rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:80%;
+}
+
+.foot .distance {
+  flex: 2;
+}
+
+.foot .area {
+  flex: 2;
+}
+
+.foot .select {
+  flex: 1.3;
+}
+
+.foot .red {
+  position:relative;
+  color: #da004b;
+}
+
+.foot .red:before {
+  position: absolute;
+  top:20%;
+  right:10%;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8rpx solid;
+  border-color: transparent transparent #da004b transparent;
+}
+
+.areaList {
+  position: absolute;
+  left: 0;
+  top: 165rpx;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.areaList .left {
+  width: 20%;
+  height: 500rpx;
+  background-color: #f4f4f4;
+}
+
+.areaList .left li {
+  display: block;
+  width: 100%;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.areaList .left .liWhite {
+  background-color: #fff;
+}
+
+.areaList .right {
+  margin-left: 5%;
+  width: 75%;
+  height: 500rpx;
+}
+
+.areaList .right li {
+  padding-left: 5%;
+  display: block;
+  width: 100%;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+}
+
+.areaList .right .liRed {
+  color: #da004b;
+  background: url("/images/icon_checked_red.png") 90% center no-repeat;
+  background-size: 40rpx 30rpx;
+}
+
+.selectList {
+  position: absolute;
+  left: 0;
+  top: 165rpx;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.selectList .left {
+  width: 20%;
+  height: 500rpx;
+  background-color: #f4f4f4;
+}
+
+.selectList .left li {
+  display: block;
+  width: 100%;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.selectList .left .liWhite {
+  background-color: #fff;
+}
+
+.selectList .right {
+  margin-left: 5%;
+  width: 75%;
+  height: 500rpx;
+}
+
+.selectList .right li {
+  padding-left: 5%;
+  width: 100%;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+  display: flex;
+  align-items:center;
+}
+.selectList .right li image{
+  width:50rpx;
+  height:50rpx;
+  margin-right:20rpx;
+}
+
+.selectList .right .liRed {
+  color: #da004b;
+  background: url("/images/icon_checked_red.png") 90% center no-repeat;
+  background-size: 40rpx 30rpx;
+}
+
+.page_bd {
+  padding-top:165rpx;
+  width: 100%;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10rpx;
+  background-color: #fff;
+}
+
+.section .img {
+  width: 220rpx;
+  height: 199rpx;
+  padding-right: 20rpx;
+}
+
+.section .img image {
+  width: 220rpx;
+  height: 199rpx;
+}
+
+.section .right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.section .right .name {
+  display: block;
+  font: 34rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding-top:10rpx;
+}
+
+.section .right .gradeComment {
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.section .right .gradeComment view {
+  font: 24rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #777;
+}
+
+.gradeComment  image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.gradeComment text {
+  color: #da004b;
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.section .right .distance {
+  color: #777;
+  font: 26rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.section .right .distance text{
+  margin-left:15rpx;
+}
+
+.section .right .activity {
+  font: 24rpx/1 "SimSun", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+}
+
+.section .right .activity .activityList {
+  border: 1px solid #98b98a;
+  color: #98b98a;
+  border-radius: 30px;
+  text-align: center;
+  padding: 5rpx 10rpx;
+  margin-right: 10rpx;
+}
+
+.section .price {
+  position: absolute;
+  right: 10rpx;
+  bottom: 0;
+  font: 20rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #999;
+}
+
+.section .price text {
+  color: #da004b;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.section .price .open {
+  color: #999;
+  font-size: 28rpx;
+  font-weight: 400;
+}
+
+.section .price .l {
+  font-size: 20rpx;
+}
+
+.mask {
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  background: #000;
+  opacity: 0.8;
+}
+
+.distanceList {
+  position: absolute;
+  left: 0;
+  top:165rpx;
+  z-index: 3;
+  width: 100%;
+  background-color: #fff;
+}
+
+.distanceList ul li {
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 15rpx 20rpx;
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #eee;
+}
+
+.distanceList ul li:last-child {
+  border-bottom: none;
+}
+
+.distanceList ul .liRed {
+  color: #da004b;
+  background: url("/images/icon_checked_red.png") 90% center no-repeat;
+  background-size: 40rpx 30rpx;
+}
+
+
+.maskList {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: none;
+  background: #000;
+  opacity: 0.7;
+}
+
+.maskListActive {
+  display: block;
+}
+
+.maskDay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  display: none;
+  background-color: #fff;
+}
+
+.maskDayActive {
+  display: block;
+}
+
+.maskDay text {
+  display: block;
+  text-align: center;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.maskDay text:nth-child(1) {
+  color: #999;
+}

@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container" >
+  <view class="header"></view>
+  <view class="cententIndex">
+    <view class="city">
+      <view class="cityAddress" bindtap="chooseCity">
+        <view>
+          <image src="/images/address.png"></image>
+        </view>
+        <view>
+          <text>{{cityName}}</text>
+          <!--<text>{{cityName}}</text>-->
+        </view>
+      </view>
+      <view class="cityPosition" bindtap="resetLocation">
+        <view>
+          <image src="/images/icon_fixed.png"></image>
+        </view>
+        <text>我的位置</text>
+      </view>
+    </view>
+     <picker bindchange="bindDateChange" mode="date" value="{{startDate}}" start="{{minDate}}" end="{{maxDate}}">
+     <view class="date">
+      <view>
+        <image src="/images/date.png"></image>
+      </view>
+      <view class="dateList">
+        <view>
+          <text>{{startDateDesc}}</text>
+          <text> 今天入住</text>
+        </view>
+        <view>
+          <text>{{endDateDesc}}</text>
+          <text> 明天入住 共{{numDay}}晚</text>
+        </view>
+      </view>
+    </view>
+     </picker>
+    <button bindtap="hotelQuery">查询酒店</button>
+  </view>
+</view>
+
+<view class="{{maskContainer?'mask':'mask maskActive'}}" bindtap="maskTap"></view>
+<view class="{{maskDayContainer?'maskDay':'maskDay maskDayActive'}}">
+  <text>预订房间数</text>
+  <text bindtap="selectDayNum" data-day="1">1晚</text>
+  <text bindtap="selectDayNum" data-day="2">2晚</text>
+  <text bindtap="selectDayNum" data-day="3">3晚</text>
+  <text bindtap="selectDayNum" data-day="4">4晚</text>
+  <text bindtap="selectDayNum" data-day="5">5晚</text>
+  <text bindtap="selectDayNum" data-day="6">6晚</text>
+  <text bindtap="selectDayNum" data-day="7">7晚</text>
+  <text bindtap="selectDayNum" data-day="8">8晚</text>
+  <text bindtap="selectDayNum" data-day="9">9晚</text>
+</view>

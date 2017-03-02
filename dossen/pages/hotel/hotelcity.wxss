@@ -1,0 +1,135 @@
+/* pages/hotel/hotelcity.wxss */
+
+.citySearch {
+  margin: 3%;
+  padding: 2%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.citySearch image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.citySearch input {
+  color: #333;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.citySearch .searchInput {
+  color: #ccc;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cityShow {
+  display: block;
+}
+
+.cityShowActive {
+  display: none;
+}
+
+.cityTop {
+  background-color: #fff;
+  padding: 3%;
+}
+
+.cityTop >view text {
+  color: #333;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cityTop ul {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cityTop ul li {
+  margin: 1% 5% 1% 0;
+  color: #333;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  text-align: center;
+  width: 20%;
+}
+.cityTop ul .selectCityFixed{
+   width: auto;
+   padding:0 20rpx;
+}
+
+.cityTop ul li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.cityFoot>view text {
+  color: #333;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  padding: 3%;
+}
+
+.cityFoot dl {
+  display: block;
+  padding: 0 3%;
+  background-color: #fff;
+}
+
+.cityFoot dl dd {
+  display: block;
+  border-bottom: 1px solid #eee;
+  color: #222;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cityFoot dl dd:last-child {
+  border-bottom: none;
+}
+
+.cityList {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  z-index: 1;
+}
+
+.cityList text {
+  display: block;
+  padding: 0 10rpx;
+  color: #da004b;
+  font: 30rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.cityHide {
+  display: block;
+}
+
+.cityHideActive {
+  display: none;
+}
+
+.cityHide dl {
+  padding: 0 3%;
+  display: block;
+  background-color: #fff;
+}
+
+.cityHide dl dd {
+  display: block;
+  font: 30rpx/3 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+.cityHide dl dd:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,16 @@
+<!--pages/common/service.wxml-->
+<view class="container"> 
+  <view class="serviceHead">
+    <view class="serviceHeadLeft">
+       <image src="/images/service_l.png"></image>
+       <text>东呈国际</text>
+    </view>
+    <view class="serviceHeadRight">
+       <view bindtap="makePhoneCall"><text>咨询/预订</text><image src="/images/service_phone.png"></image></view>
+       <view bindtap="makePhoneCall"><text>订单/投诉</text><image src="/images/service_phone.png"></image></view>
+       <view bindtap="makePhoneCall"><text>优惠券/支付</text><image src="/images/service_phone.png"></image></view>
+    </view>
+  
+  </view>
+  <view class="serviceFoot">如有问题，请拨打客服电话： <text>400-700-7899</text></view>
+</view>

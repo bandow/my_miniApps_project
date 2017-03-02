@@ -1,0 +1,42 @@
+
+<!--pages/order/orderCoupon.wxml-->
+
+<view class="container">
+<block  wx:if="{{couponList.length>0}}">
+  <scroll-view>
+    <view class="couponList" wx:for="{{couponList}}"  wx:for-item="item">
+      <view class="couponListTop" bindtap="setStatus" data-couponCode="{{item.CouponCode}}">
+        <view>
+           <image style="width:80rpx;height:80rpx;" src="/images/icon_coupon.png"></image>
+        </view>
+        <view>
+          <text class="">{{item.Name}}</text>
+          <text class="">适合范围：{{item.EnableHotels}}</text>
+        </view>
+        <view wx:if="{{item.checked==true}}">
+          <image src="/images/icon_circle_checked.png"></image>
+
+          <!--<image src="/images/icon_circle_unchecked.png"></image>-->
+        </view>
+        <view wx:else>
+
+          <!--<image src="/images/icon_circle_checked.png"></image>-->
+          <image src="/images/icon_circle_unchecked.png"></image>
+        </view>
+      </view>
+      <view class="couponListFoot">
+        <text class="">有效期：{{item.EndTime}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</block>
+<block wx:else>
+  <!--无优惠券 begin-->
+   <view class="nullOrder">
+      <view><image src="/images/icon_blankpage_ticket.png"></image></view>
+      <text>暂无优惠券信息</text>
+   </view>
+   <!--无优惠券 end-->
+</block>
+
+</view>

@@ -1,0 +1,499 @@
+/* pages/hotel/detailed.wxss */
+
+.carousel {
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel view image {
+  width: 100%;
+  height: 100%;
+}
+
+.iconPhone {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.iconCollect {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.carousel text {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font: 30rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.address {
+  position: relative;
+  padding: 3% 5% 1%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/*.address:after{
+    content:"";
+    position: absolute;
+    top:50%;
+    right:5%;
+    margin-top:-3px;
+    width:6px;
+    height:6px;
+    border: 1px solid;
+    border-bottom: 0;
+    border-right: 0;
+    color: #ccc;
+    transform:rotateZ(135deg);
+}*/
+
+.address .left {
+  margin-right: 20rpx;
+}
+
+.address .left .imgL {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.address .right {
+  flex: 5;
+}
+
+.address .right text {
+  display: block;
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.address .right .addressText {
+  color: #2d2d2d;
+  margin-bottom: 15rpx;
+}
+
+.grade {
+  position: relative;
+  padding: 3% 10% 3% 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/*.grade:after{
+    content:"";
+    position: absolute;
+    top:50%;
+    right:5%;
+    margin-top:-3px;
+    width:6px;
+    height:6px;
+    border: 1px solid;
+    border-bottom: 0;
+    border-right: 0;
+    color: #ccc;
+    transform:rotateZ(135deg);
+}*/
+
+.grade view:first-child {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10rpx;
+}
+
+.grade view:first-child .stars {
+  background-image: url("/images/star.png");
+  width: 43rpx;
+  height: 43rpx;
+  background-size: 43rpx 43rpx;
+  margin-left: 5rpx;
+}
+
+.grade view:first-child .on {
+  background-image: url("/images/star_on.png");
+  width: 43rpx;
+  height: 43rpx;
+  background-size: 43rpx 43rpx;
+}
+
+.grade .gradeC {
+  font: 32rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+  flex: 1.5;
+}
+
+.grade .gradeC text:nth-child(2) {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.grade .gradeR {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+  flex: 1;
+}
+
+.grade .gradeR text {
+  text-align: right;
+  display: block;
+}
+
+.info {
+  position: relative;
+  padding: 3% 10% 3% 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/*l*/
+
+.info view {
+  flex: 1.5;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  font: 24rpx/35rpx "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #98b98a;
+}
+
+/*.info view:last-child{
+    flex:.5;
+    color:#666;
+}*/
+
+.info view:last-child text {
+  text-align: right;
+  display: block;
+}
+
+.info view image {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+
+.tiemDate {
+  position: relative;
+  padding: 3% 10% 3% 5%;
+  margin-top: 20rpx;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+}
+
+.tiemDate:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #ccc;
+  transform: rotateZ(135deg);
+}
+
+.tiemL {
+  padding-right: 10rpx;
+  margin-right: 10rpx;
+  border-right: 1px solid #eee;
+}
+
+.tiemL image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.tiemM {
+  flex: 5;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.tiemR {
+  flex: 1;
+  font: 24rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.tiemR text {
+  text-align: right;
+  display: block;
+}
+
+.lTime {
+  flex: 2;
+}
+
+.lTime text {
+  font: 24rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.lTime view {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+}
+
+.lTime view text {
+  color: #666;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+
+.lTime view text:nth-child(1) {
+  color: #000;
+  font-size: 30rpx;
+}
+
+.cTime {
+  margin: 48rpx 20rpx 0 0;
+  width: 30rpx;
+  height: 4rpx;
+  background-color: #999;
+}
+
+.rTime {
+  flex: 2;
+}
+
+.rTime text {
+  font: 24rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.rTime view {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+}
+
+.rTime view text {
+  color: #666;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+
+.rTime view text:nth-child(1) {
+  color: #000;
+  font-size: 30rpx;
+}
+
+.roomListTop {
+  position: relative;
+  padding: 3% 10% 3% 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+}
+
+.roomListTop:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #ccc;
+  transform: rotateZ(-135deg);
+}
+
+.roomListTop view:nth-child(1) {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+
+.roomListTop view:nth-child(1) image {
+  width: 100%;
+  height: 100%;
+}
+
+.roomListTop view:nth-child(2) {
+  flex: 5;
+}
+
+.roomListTop view:nth-child(2) text {
+  font: 34rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+}
+
+.roomListTop view:nth-child(2) view text {
+  font: 24rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+  margin-right:15rpx;
+}
+
+.roomListTop view:nth-child(3) {
+  flex: 1.5;
+}
+
+.roomListTop view:nth-child(3) {
+  color: #666;
+  font: 20rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.roomListTopActive view:nth-child(3) {
+  color: #da004b;
+  font: 20rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.roomListTop view:nth-child(3) text:nth-child(1) {
+  font-size: 34rpx;
+}
+
+.roomListTop view:nth-child(3) text:nth-child(2) {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.roomListFoot dd {
+  padding: 3% 0;
+  margin: 0 5%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.roomListFoot dd:last-child {
+  border-bottom: none;
+}
+
+.roomListFoot dd view:nth-child(1) {
+  flex: 4;
+}
+
+.roomListFoot dd view:nth-child(1) text {
+  font: 30rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+}
+
+.roomListFoot dd view:nth-child(1) view text {
+  font: 24rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.roomListFoot dd view:nth-child(2) {
+  flex: 2;
+}
+
+.moneyList {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.roomListFoot dd view:nth-child(2) view {
+  color: #da004b;
+  font: 20rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.roomListFoot dd view:nth-child(2) view text {
+  font-size: 30rpx;
+  color: #da004b;
+}
+
+.roomListFoot dd view:nth-child(2) .lessThan {
+  padding: 0 10rpx;
+  background-color: #f8aac5;
+  color: #fff;
+  font: 20rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.roomListFoot dd view:nth-child(3) {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 5px;
+  background-color: #da004b;
+}
+
+.roomListFoot dd view:nth-child(3) text {
+  display: block;
+  font: 28rpx/70rpx "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+  background: #000;
+  opacity: 0.7;
+}
+
+.maskActive {
+  display: block;
+}
+
+.maskDay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+  background-color: #fff;
+}
+
+.maskDayActive {
+  display: block;
+}
+
+.maskDay text {
+  display: block;
+  text-align: center;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.maskDay text:nth-child(1) {
+  color: #999;
+}

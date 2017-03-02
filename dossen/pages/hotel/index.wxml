@@ -1,0 +1,23 @@
+
+<!--pages/hotel/index.wxml-->
+<text>预定首页</text>
+<form bindsubmit="yudingSub">
+  <view>全天房：
+    <view  bindtap="selectCity">城市：广州
+      <input name="CityCode" value="22" hidden />
+    </view>
+    <view>入住：
+      <input name="CheckInDay" value='2017-01-04' />
+    </view>
+    <view>离店：
+      <input  name="CheckOutDay" value='2017-01-05' />
+    </view>
+    <view>品牌：
+      <input value='' name="Brand" placeholder="城市便捷、宜程、宜尚" />
+    </view>
+    <view>关键字：
+      <input value='' name="Keyword" placeholder="酒店名、区域、商圈" />
+    </view>
+  </view>
+  <button  formType="submit" bindtap="getLocation">预定</button>
+</form>

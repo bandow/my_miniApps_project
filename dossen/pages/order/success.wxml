@@ -1,0 +1,37 @@
+
+<!--pages/order/success.wxml-->
+
+<!--<text>{{orderId}}</text>-->
+<view class="container">
+  <view class="successTop">
+    <view>
+      <image src="/images/icon_pay.png"></image>
+    </view>
+    <text>预定成功！</text>
+  </view>
+  <view class="successFoot">
+    <text>您的订单信息如下：</text>
+    <view class="successFootText">
+      <view>
+        <text>● {{checkInDateDesc}}</text>
+        <text>{{dayOfWeek}}</text>
+      </view>
+      <view>出行日期</view>
+      <view>
+        <view>{{order.Hotel.Name}}</view>
+        <view>
+          <text>入住房型：</text>
+          <text>{{order.RoomTypeName}}/{{order.numDay}}晚{{order.BookingNum}}间</text>
+        </view>
+        <view>
+          <text>联系人：</text>
+          <text>{{order.GuestName}}</text>
+        </view>
+        <view>
+          <text>联系电话：</text>
+          <text>{{order.Telephone}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

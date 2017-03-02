@@ -1,0 +1,32 @@
+<view class="container" wx:if="{{onloaded}}">
+  <view class="pointTop">
+    <view>
+      <view>
+        <text>当前积分</text>
+        <text>{{member.MemberPoint}}</text>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="page_bd">
+    <view class="infoDetail">积分明细</view>
+    <view wx:for="{{PointList}}" wx:for-item="item" class="pointList" wx:if="{{PointList.length>0}}">
+      <view>
+        <text class="detial_reason">{{item.Reason}}</text>
+        <text class="detail_time">{{item.CreateTime}}</text>
+      </view>
+      <view>
+        <text class="detail_point">{{item.Point}}</text>
+      </view>
+    </view>
+
+    <!--无优惠券 begin-->
+    <view class="nullOrder nullPoint" wx:if="{{PointList.length<=0}}">
+      <view>
+        <image src="/images/icon_point.png"></image>
+      </view>
+      <text>暂无积分</text>
+    </view>
+    <!--无优惠券 end-->
+
+  </scroll-view>
+</view>

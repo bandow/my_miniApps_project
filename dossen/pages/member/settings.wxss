@@ -1,0 +1,45 @@
+/* pages/member/settings.wxss */
+
+page {
+  height: 100%;
+}
+
+.changePassword {
+  position: relative;
+  border-top: 10rpx solid #efefef;
+  background-color: #fff;
+  padding: 3%;
+}
+
+/*.changePassword:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #ccc;
+  transform: rotateZ(135deg);
+}*/
+
+text {
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #808080;
+}
+
+button {
+  margin: 500rpx auto;
+  width: 90%;
+  background-color: #da004b;
+  font-size: 30rpx;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.button-hover {
+  background-color: #e31e62;
+}

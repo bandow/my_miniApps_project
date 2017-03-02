@@ -1,0 +1,111 @@
+/* pages/member/login.wxss */
+page{
+  background-color: #fff;
+}
+.container {
+  background-color: #fff;
+}
+
+.login {
+  padding-top: 50rpx;
+}
+
+.title {
+  padding: 50rpx 0 0;
+  display: block;
+  text-align: center;
+  font: 34rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.pointOut {
+  text-align: center;
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #e1336f;
+  display:none;
+}
+
+.loginSubmit {
+  margin-top: 50rpx;
+}
+
+.formSubmit view {
+  padding: 2% 0;
+  margin: 0 5%;
+  border-bottom: 1px solid #eee;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.formSubmit .code{
+   display:none;
+}
+
+.formSubmit view text {
+  width: 150rpx;
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.formSubmit view .gain {
+  padding: 5rpx 15rpx;
+  width: auto;
+  text-align: center;
+  font: 26rpx/1 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #e1336f;
+  border: 1px solid #e1336f;
+  border-radius: 3px;
+}
+
+.formSubmit view input {
+  flex: 3;
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.formSubmit view image {
+  width: 30rpx;
+  height: 30rpx;
+  display:none;
+}
+
+button {
+  margin: 50rpx auto;
+  width: 90%;
+  background-color: #e1336f;
+  font-size: 30rpx;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.button-hover {
+  background-color: #e31e62;
+}
+
+.forget {
+  text-align: center;
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #808080;
+}
+
+.forget text {
+  font-size: 30rpx;
+  color: #617df5;
+}
+
+.formSubmit .show {
+   display: -webkit-flex;
+   display: flex;
+}
+.formSubmit .hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+

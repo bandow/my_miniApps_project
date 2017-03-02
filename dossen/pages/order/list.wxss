@@ -1,0 +1,77 @@
+/* pages/order/list.wxss */
+
+.container {
+  padding-bottom: 90rpx;
+}
+
+.orderList {
+  position: relative;
+  padding: 2% 5%;
+  margin: 20rpx 0;
+  background-color: #fff;
+}
+
+.orderList text {
+  display: block;
+}
+
+.name {
+  margin-bottom: 10rpx;
+  color: #212121;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.checkInTime {
+  color: #666;
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.checkInRoom {
+  color: #666;
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cancel {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  border-top: 1px solid #ccc;
+}
+
+.cancel view:nth-child(1) {
+  flex: 1;
+  margin-left: 0;
+}
+
+.cancel view:nth-child(1) text {
+  color: #da004b;
+  font: 30rpx/2.4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cancel view {
+  margin-left: 10rpx;
+}
+
+.cancel view:nth-child(2) {
+  padding: 0.5% 2%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font: 30rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cancel view:nth-child(3) {
+  padding: 0.5% 2%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font: 30rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.cancel view:nth-child(4) {
+  padding: 0.5% 2%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font: 30rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}

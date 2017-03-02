@@ -1,0 +1,59 @@
+/* pages/common/service.wxss */
+
+.serviceHead {
+  margin: 20rpx 0 50rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.serviceHeadLeft {
+  flex: 1;
+}
+
+.serviceHeadLeft image {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+
+.serviceHeadLeft text {
+  display: block;
+  text-align: center;
+  color: #999;
+  font: 28rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.serviceHeadRight {
+  flex: 2;
+  border-left: 1px solid #eee;
+  margin-left: 30rpx;
+  padding-left: 50rpx;
+}
+
+.serviceHeadRight view {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 0 30rpx 0 60rpx;
+}
+
+.serviceHeadRight view text {
+  flex: 1;
+  color: #333;
+  font: 30rpx/4 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.serviceHeadRight view image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.serviceFoot{
+     color: #999;
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.serviceFoot text{
+    color:#da004b;
+}

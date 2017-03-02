@@ -1,0 +1,89 @@
+
+<!--pages/order/item.wxml-->
+<view class="container" wx:if="{{onloaded}}">
+
+  <!--1 预定成功-->
+  <view class="block1">
+    <view class="block1-1">
+      <image src="/images/icon_circle_checked.png" class="image-confirm"></image>
+      <text>{{order.Status}}</text>
+    </view>
+    <view class="block1-2">
+      <text wx:for="{{order.Tags}}" wx:for-item="tag">{{tag.Key}}</text>
+    </view>
+  </view>
+
+  <!--2 城市便捷-->
+  <view class="block2">
+    <view class="block2-1">
+      <text>{{order.Hotel.Name}}</text>
+      <text>{{order.Hotel.Address}}</text>
+    </view>
+    <view class="block2-2">
+      <view>
+        <image src="/images/icon_order_phone.png"></image>
+        <text catchtap="makePhoneCall" id="{{order.Hotel.Telephone}}">联系酒店</text>
+      </view>
+      <view>
+        <image src="/images/icon_order_service.png"></image>
+        <text catchtap="makePhoneCall" id="400-700-7899">联系客服</text>
+      </view>
+    </view>
+  </view>
+
+  <!--3 标准大床房-->
+  <view class="block3">
+    <text style="margin-bottom:10%;">{{order.RoomTypeName}}<text style="margin-left:20rpx;">{{order.numDay}}晚/{{order.BookingNum}}间</text>
+    </text>
+    <view class="text1">
+      <text>入住时间：</text>
+      <text>{{order.CheckInDate}}</text>
+    </view>
+    <view class="text1">
+      <text>离店时间：</text>
+      <text>{{order.CheckOutDate}}</text>
+    </view>
+    <view class="text1">
+      <!--<text style="text-align: center;"> 联系人：</text>-->
+      <text> 联系人：</text>
+      <text>{{order.GuestName}}</text>
+    </view>
+    <view class="text1">
+      <text>联系电话：</text>
+      <text>{{order.Telephone}}</text>
+    </view>
+  </view>
+
+  <!--4 订单信息-->
+  <view class="block4">
+    <text>订单信息</text>
+    <view class="text1">
+      <text>订单价格：</text>
+      <text>¥{{order.TotalFee-order.Coupon}}</text>
+    </view>
+
+    <!--优惠金额大于0才显示-->
+    <view wx:if="{{order.Coupon>0}}" class="text1">
+      <text>优惠抵扣：</text>
+      <text>-¥{{order.Coupon}}</text>
+    </view>
+    <view class="text1">
+      <text>订单编号：</text>
+      <text>{{order.OrderId}}</text>
+    </view>
+    <view class="text1">
+      <text>下单日期：</text>
+      <text>{{order.CreateTime}}</text>
+    </view>
+  </view>
+
+  <!--酒店政策-->
+  <view class="block5">
+    <text>酒店政策</text>
+    <text>如需取消退款请再预留时间前致电客服热线处理，否则会扣除当天房费。全国客服热线：4007007899，我们将尽快为您服务，谢谢！
+    </text>
+  </view>
+  <view class="block6" wx:for="{{order.Events}}" wx:for-item="event">
+    <text bindtap="cancel" id="{{order.OrderId}}" data-hid="{{order.HotelId}}">{{event.Key}}</text>
+  </view>
+</view>

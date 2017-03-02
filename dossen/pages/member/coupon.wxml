@@ -1,0 +1,28 @@
+<view class="container">
+  <scroll-view wx:if="{{Coupons.length>0}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+    <view wx:for="{{Coupons}}" wx:for-item="item" class="couponList" bindtap="couponList" data-index="{{index}}" >
+      <view class="couponListTop">
+        <view>
+          <image style="width:80rpx;height:80rpx;" src="/images/icon_coupon.png"></image>
+        </view>
+        <view>
+          <text class="">{{item.Name}}</text>
+          <text class="">适合范围：{{item.EnableHotels}}</text>
+        </view>
+      </view>
+      <view class="couponListFoot">
+        <text class="">有效期：{{item.EndTime}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!--无优惠券 begin-->
+  <view class="nullOrder" wx:if="{{Coupons.length<=0}}">
+    <view>
+      <image src="/images/icon_blankpage_ticket.png"></image>
+    </view>
+    <text>暂无优惠券</text>
+  </view>
+
+  <!--无优惠券 end-->
+</view>

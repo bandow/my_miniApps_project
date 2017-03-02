@@ -1,0 +1,29 @@
+<view class="container" wx:if="{{onloaded}}">
+<block wx:if="{{orders.length>0}}">
+  <view wx:for="{{orders}}" wx:for-item="item" class="orderList" >
+    <view catchtap="gotoDetialPage" id="{{item.OrderId}}">
+      <text class="name">{{item.Hotel.Name}}</text>
+      <text class="checkInTime">入住时间：{{item.CheckInDate}}</text>
+      <text class="checkInTime">离店时间：{{item.CheckOutDate}}</text>
+      <text class="checkInRoom">入住房型：{{item.RoomTypeName}}</text>
+      <!--事件按钮-->
+      <view class="cancel">
+        <view>
+          <text class="money">￥{{item.TotalFee-item.Coupon}}</text>
+        </view>
+        <view wx:for="{{item.Events}}" wx:for-item="event">
+          <text catchtap="cancel" id="{{item.OrderId}}" data-hid="{{item.HotelId}}">{{event.Key}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  </block>
+  <block wx:else>
+   <!--无订单 begin-->
+   <view class="nullOrder" wx:if="{{orders.length<=0}}">
+      <view><image src="/images/icon_blankpage_order.png"></image></view>
+      <text>暂无订单信息</text>
+   </view>
+   <!--无订单 end-->
+   </block>
+</view>

@@ -1,0 +1,7 @@
+
+<!--pages/member/settings.wxml-->
+<view class="container">
+  <view class="changePassword" bindtap="checkOut">
+    <text>切换账号</text>
+  </view>
+</view>

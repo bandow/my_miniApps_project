@@ -1,0 +1,108 @@
+/* pages/hotel/search.wxss */
+
+.searchTop {
+  padding: 3%;
+  background-color: #fff;
+}
+
+.searchTopContainer {
+  display: flex;
+  align-items: center;
+  padding: 1% 0;
+  border-radius: 5px;
+  background-color: #efefef;
+}
+
+.searchTopContainer view:nth-child(1) {
+  padding: 0 5%;
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-right: 1px solid #ccc;
+}
+
+.searchTopContainer view:nth-child(1) text {
+  color: #333;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.searchTopContainer view:nth-child(1)::before {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8rpx solid;
+  border-color: #ccc transparent transparent transparent;
+}
+
+.searchTopContainer view:nth-child(2) {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.searchTopContainer view .searchIcon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.searchTopContainer view input {
+  margin-left: 2%;
+  flex: 1;
+  color: #333;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.searchTopInput {
+  color: #999;
+  font: 30rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.searchTopContainer view .closeIocn {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+  display: none;
+}
+
+.searchTopContainer view .closeIocnActive {
+  display: block;
+}
+
+.searchFoot {
+  background-color: #fff;
+  padding: 0 3%;
+}
+
+.searchFoot .addressList {
+  padding: 20rpx 0;
+  border-top: 1px solid #eee;
+}
+
+.addressList view:nth-child(1) {
+  color: #333;
+  font:30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.searchFoot view:nth-child(2) {
+  display: block;
+  color: #999;
+  font: 24rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addressList view .hot {
+  margin-left: 20rpx;
+  color: #9ab485;
+  font: 24rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  border: 1px solid #eee;
+  padding: 0 1.5%;
+  border-radius: 5px;
+}

@@ -1,0 +1,112 @@
+.container {
+  padding-bottom: 90rpx;
+}
+
+.memberTop {
+  margin-bottom: 20rpx;
+  padding-top: 110rpx;
+  background: url("https://resource1.dongchenghotels.com/StaticFile/wxapp/member_top.jpg") #fff no-repeat;
+  background-size: 100% auto;
+}
+
+.memberImg {
+  margin: 0 auto;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.memberImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.memberName {
+  text-align: center;
+}
+
+.memberName text {
+  font: 34rpx/2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.memberLevel {
+  text-align: center;
+}
+
+.memberLevel text {
+  padding: 0 20rpx;
+  font: 24rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #999;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  display:block;
+  width:8%;
+  margin:0 auto;
+}
+
+.memberList {
+  padding: 3% 10%;
+  display: flex;
+  align-items: center;
+}
+
+.memberList>view {
+  flex: 1;
+  text-align: center;
+}
+
+.memberList>view text {
+  display: block;
+  font: bold 34rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.memberList>view text:nth-child(2) {
+  font: 24rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #999;
+}
+
+.memberFoot {
+  padding: 2% 0;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  background-size: 100% auto;
+}
+
+.memberFoot>view {
+  padding: 2% 5%;
+  display: flex;
+  align-items: center;
+}
+
+.memberFoot>view:nth-child(1) text {
+  color: #ccc;
+  font: 24rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.memberFoot>view:nth-child(2) {
+  border-bottom: 1px solid #eee;
+}
+
+.memberFoot>view image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.memberFoot>view:nth-child(3) image {
+  width: 32rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.memberFoot>view text {
+  flex: 1;
+  display: block;
+  font: 30rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #333;
+}

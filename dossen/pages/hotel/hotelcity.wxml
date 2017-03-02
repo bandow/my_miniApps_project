@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="city">
+    <view class="citySearch">
+      <image src="/images/icon_search@2x.png"></image>
+      <input  bindconfirm="bindKeyInput" value="{{value}}" placeholder-class="searchInput" placeholder="输入目的地名称" />
+    </view>
+    <view >
+      <view class="cityTop">
+        <view>
+          <text>当前定位</text>
+        </view>
+        <ul>
+          <li class="selectCityFixed">{{cityName}}</li>
+        </ul>
+        <view>
+          <text>热门城市</text>
+        </view>
+        <ul>
+          <li wx:for="{{hotelCityList}}" wx:for-item="item" data-city="{{item}}" data-cityCode="{{item.CityCode}}" bindtap="chooseCity">{{item.CityName}}</li>
+        </ul>
+      </view>
+      <view class="cityFoot">
+      <block wx:for="{{cityCategories}}">
+        <view>
+          <text>{{item.Code}}</text>
+        </view>
+        <dl>
+          <dd wx:for="{{item.CityList}}" wx:for-item="item" data-city="{{item}}" data-cityCode="{{item.CityCode}}" data-pinyin="{{item.PinYin}}" bindtap="chooseCity">{{item.CityName}}</dd>
+        </dl>
+      </block>
+        <!--<view>
+          <text>B</text>
+        </view>
+        <dl>
+          <dd>安顺</dd>
+          <dd>安阳</dd>
+        </dl>-->
+      </view>
+    </view>
+    <!--<view class="{{cityHide?'cityHide':'cityHide cityHideActive'}}">
+      <dl>
+        <dd>安顺</dd>
+        <dd>安阳</dd>
+        <dd>安顺</dd>
+        <dd>安阳</dd>
+        <dd>安顺</dd>
+        <dd>安阳</dd>
+        <dd>安顺</dd>
+        <dd>安阳</dd>
+        <dd>安顺</dd>
+        <dd>安阳</dd>
+        <dd>安顺</dd>
+        <dd>安阳</dd>
+      </dl>
+    </view>-->
+  </view>
+</view>
+
+<!--<view>城市酒店</view>
+<view wx:for="{{cityList}}">
+  <text>
+    区域ID：{{item.CityCode}},区域名称：{{item.CityName}}
+  </text>
+</view>-->

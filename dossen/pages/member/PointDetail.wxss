@@ -1,0 +1,79 @@
+/* pages/member/PointDetail.wxss */
+
+.pointTop {
+  padding: 10%;
+  background-color: #fff;
+  margin-bottom: 50rpx;
+}
+
+.pointTop >view {
+  padding:10rpx;
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  border:1px solid #da004b;
+}
+
+.pointTop >view view {
+  
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #da004b;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.pointTop >view text:nth-child(1) {
+  padding-top:30rpx;
+  display: block;
+  font: 28rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.pointTop >view text:nth-child(2) {
+  display: block;
+  font: 34rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.infoDetail {
+  font: 28rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+  padding: 2% 3%;
+}
+
+.pointList {
+  padding: 2% 3%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.pointList>view:nth-child(1) {
+  flex: 3;
+}
+
+.pointList>view:nth-child(2) {
+  flex: 1;
+}
+
+.pointList>view:nth-child(2) text {
+  text-align: right;
+  color: #da004b;
+}
+
+.pointList>view text {
+  font: 34rpx/1.5 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #2d2d2d;
+  display: block;
+}
+
+.pointList>view text:nth-child(2) {
+  font: 28rpx/1.2 "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: #666;
+}

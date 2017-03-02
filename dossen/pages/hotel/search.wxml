@@ -1,0 +1,29 @@
+
+<!--pages/hotel/search.wxml-->
+<view class="container">
+  <view class="searchTop">
+    <view class="searchTopContainer">
+         <view bindtap="cityChange">
+      <text>{{currentCity.cityName}}</text>
+    </view>
+    <view>
+      <image class="searchIcon" src="/images/icon_search@2x.png"></image>
+      <input type="text" value="{{keyWord}}" placeholder-class="searchTopInput" placeholder="目的地/品牌/酒店名称" bindconfirm="keywordChange" bindfocus="keywordFocus" />
+      <image class="{{closeIocn?'closeIocn':'closeIocn closeIocnActive'}}" src="/images/login_close.png" catchtap="closeTap"></image>
+    </view>
+    </view>
+  </view>
+  <view class="searchFoot">
+    <block wx:for="{{searchKeys}}">
+      <view class="addressList" data-type="{{item.Type}}" data-key="{{item.Key}}" data-Longitude="{{item.MapPoint.Longitude}}" data-Latitude="{{item.MapPoint.Latitude}}"  bindtap="chooseKeys">
+        <view>
+          <text>{{item.Key}}</text>
+          <text wx:if="{{item.Tags.length>0}}">
+            <text class="hot" wx:for="{{item.Tags}}">{{item.Key}}</text>
+          </text>
+        </view>
+        <view>{{item.Value.Address}}</view>
+      </view>
+    </block>
+  </view>
+</view>
