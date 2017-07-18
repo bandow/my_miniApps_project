@@ -3,9 +3,10 @@
 -->
 <view class="container">
   <view class="header">
-    <image class="bee-up" src="../../images/bee_up.png" mode="widthFix"></image>
+    <image src="../../images/index_bg.jpg" mode="widthFix"></image>
+    <!--<image class="bee-up" src="../../images/bee_up.png" mode="widthFix"></image>
     <image class="bee-down" src="../../images/bee_down.png" mode="widthFix"></image>
-    <image class="logoimg" src="../../images/logo1.png" mode="widthFix"></image>
+    <image class="logoimg" src="../../images/logo1.png" mode="widthFix"></image>-->
     <view class="search">
       <input placeholder="输入公众号查最新报价" bindinput="bindInput"></input>
       <view bindtap="bindSrchBtnTap">
@@ -13,8 +14,8 @@
       </view>
     </view>
   </view>
-  <text class="linkers-title">其他超值传播包</text>
-  <view class="linkers">
+  <!--<text class="linkers-title">其他超值传播包</text>-->
+  <!--<view class="linkers">
     <view class="linker-wrap">
       <image id="linker-tech" src="../../images/ic_go_01.png" mode="widthFix" bindtap="bindLinkerTap" data-type="1"></image>
       <text>科技</text>
@@ -35,6 +36,22 @@
       <image id="linker-foreign" src="../../images/ic_go_05.png" mode="widthFix" bindtap="bindLinkerTap" data-type="5"></image>
       <text>海外</text>
     </view>
+  </view>-->
+  <view class="btnList">
+      <view class="btn" catchtap="btn1">
+        <image src="../../images/index1_icon.png"></image>
+        <text>蜂商城</text>
+      </view>
+      <view class="btn" catchtap="btn2">
+        <image src="../../images/index2_icon.png"></image>
+        <text>自媒体入驻</text>
+      </view>
+      <view class="btn" catchtap="btn3">
+        <image src="../../images/index3_icon.png"></image>
+        <text>品牌产品合作</text>
+      </view>
   </view>
-  <image class="footerlogo" src="../../images/logo4.png" mode="widthFix"></image>
+  <view class="footer">
+    <image class="footerlogo" src="../../images/logo4.png" mode="widthFix"></image>
+  </view>
 </view>

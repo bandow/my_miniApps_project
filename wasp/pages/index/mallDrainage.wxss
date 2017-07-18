@@ -1,0 +1,40 @@
+/* pages/index/mallDrainage.wxss */
+page{
+    background:#fff;
+}
+.wrapper .header{
+    width:100%;
+}
+.wrapper .header image{
+    width:100%;
+}
+.mall-btnList .btn{
+  margin:30rpx auto 0;
+  width:80%;
+  height:80rpx;
+  line-height:80px;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  border-radius:5px;
+  background: -webkit-linear-gradient(top, #fedf5f 0%,#e3b806 100%);
+  background: linear-gradient(to bottom, #fedf5f 0%,#e3b806 100%);
+  box-shadow:1px 1px 1px #cca400,-1px 5px 1px #cca400;
+}
+.mall-btnList .btn:nth-child(1) image{
+  height:43rpx;
+  width:49rpx;
+}
+.mall-btnList .btn:nth-child(2) image{
+  height:46rpx;
+  width:40rpx;
+}
+.mall-btnList .btn image{
+  padding-left:30%;
+}
+.mall-btnList .btn text{
+  color:#393939;
+  margin-left:20rpx;
+  font-size:30rpx;
+  flex: 1;
+}

@@ -1,0 +1,16 @@
+<!--pages/index/mallDrainage.wxml-->
+<view class="wrapper">
+    <view class="header">
+        <image src="../../images/mallDrainage_bg.jpg" mode="widthFix"></image>
+    </view>
+    <view class="mall-btnList">
+        <view class="btn" catchtap="btn2">
+            <image src="../../images/index2_icon.png"></image>
+            <text>自媒体入驻</text>
+        </view>
+        <view class="btn" catchtap="btn3">
+            <image src="../../images/index3_icon.png"></image>
+            <text>品牌产品合作</text>
+        </view>
+    </view>
+</view>

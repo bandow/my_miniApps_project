@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/mallDrainage",
     "pages/linker/linker",
     "pages/packlist/packlist",
     "pages/packitem/packitem",
