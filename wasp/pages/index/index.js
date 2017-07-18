@@ -1,26 +1,36 @@
+/**
+ *  zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+ */
 //index.js
-//获取应用实例
+
+var util = require('../../utils/util.js')
+var hycomm = require('../../utils/hycomm.js')
+
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+  },
+  bindInputBlur: function(e) {
+    app.data.keyword = e.detail.value;
+  },
+  bindInput: function(e) {
+    app.data.keyword = e.detail.value;
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindSrchBtnTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../srchresult/srchresult'
+    })
+  },
+  bindLinkerTap: function(e){
+    var ptype = e.currentTarget.dataset.type;
+    wx.navigateTo({
+      url: '../packlist/packlist?type='+ptype
     })
   },
   onLoad: function () {
     console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
-  }
+    var _this = this;
+    wx.showShareMenu();
+  },
 })

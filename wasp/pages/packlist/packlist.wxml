@@ -1,0 +1,19 @@
+<!--
+    zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+-->
+<view class="container">
+    <scroll-view scroll-y="true" class="list" enable-back-to-top="true">
+        <view class="package-item" bindtap="bindPackListTap" wx:for="{{ packages }}" wx:for-item="package" data-idx="{{index}}">
+            <view class="package-header">
+                <image class="header-avatar" src="{{package.avatar}}"></image>
+                <text class="header-name">{{package.name}}</text>
+                <text class="header-price">{{package.price}}</text>
+                <view class="header-apply">
+                    <text>{{package.effect}}</text>
+                    <text>{{package.apply}}</text>
+                </view>
+                <image class="next" src="../../images/ic_next.png"></image>
+            </view>
+        </view>
+    </scroll-view>
+</view>

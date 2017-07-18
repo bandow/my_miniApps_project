@@ -1,12 +1,23 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/linker/linker",
+    "pages/packlist/packlist",
+    "pages/packitem/packitem",
+    "pages/srchresult/srchresult",
+    "pages/iteminfo/iteminfo"
   ],
   "window":{
+    "navigationBarBackgroundColor":"#fed426",
+    "navigationBarTextStyle":"black",
+    "navigationBarTitleText":"",
+    "backgroundColor":"#e8edf1",
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "enablePullDownRefresh":false
+  },
+  "networkTimeout":{
+    "request":10000,
+    "downloadFile":10000
+  },
+  "debug":true
 }

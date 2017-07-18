@@ -1,0 +1,172 @@
+<!--
+    zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+-->
+<template name="person-item1">
+    <navigator wx:if="{{ item != null }}" hover-class="navigator-hover" url="../iteminfo/iteminfo?id={{ item.id }}">
+        <view class="person-item has-next">
+            <image class="avatar" src="{{ item.headimgurl }}"></image>
+            <view class="meta">
+                <text class="nickname">{{ item.nickname }}</text>
+                <text class="account">{{ item.account }}</text>
+                <view class="other">
+                <text wx:if="{{ item.fans < 10000 }}" class="fans-total">粉丝 {{ item.fans }}</text>
+                <text wx:elif="{{ item.fans % 10000 > 0 }}" class="fans-total">粉丝 {{ (item.fans-item.fans%10000)/10000 }}W+</text>
+                <text wx:else class="fans-total">粉丝 {{ (item.fans-item.fans%10000)/10000 }}W</text>
+                <text wx:if="{{ item.click_count < 10000 }}" class="click-total">阅读量 {{ item.click_count }}</text>
+                <text wx:elif="{{ item.click_count % 10000 > 0 }}" class="click-total">阅读量 {{ (item.click_count-item.click_count%10000)/10000 }}W+</text>
+                <text wx:else class="click-total">阅读量 {{ (item.click_count-item.click_count%10000)/10000 }}W</text>
+                </view>
+            </view>
+            <image class="next" src="../../images/ic_next.png"></image>
+        </view>
+    </navigator>
+</template>
+
+<template name="person-item2">
+    <view wx:if="{{ item != null }}" class="person-item">
+        <image class="avatar" src="{{ item.headimgurl }}"></image>
+        <view class="meta">
+            <text class="nickname">{{ item.nickname }}</text>
+            <text class="account">{{ item.account }}</text>
+            <view class="other">
+                <text wx:if="{{ item.fans < 10000 }}" class="fans-total">粉丝 {{ item.fans }}</text>
+                <text wx:elif="{{ item.fans % 10000 > 0 }}" class="fans-total">粉丝 {{ (item.fans-item.fans%10000)/10000 }}W+</text>
+                <text wx:else class="fans-total">粉丝 {{ (item.fans-item.fans%10000)/10000 }}W</text>
+                <text wx:if="{{ item.click_count < 10000 }}" class="click-total">阅读量 {{ item.click_count }}</text>
+                <text wx:elif="{{ item.click_count % 10000 > 0 }}" class="click-total">阅读量 {{ (item.click_count-item.click_count%10000)/10000 }}W+</text>
+                <text wx:else class="click-total">阅读量 {{ (item.click_count-item.click_count%10000)/10000 }}W</text>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="person-list">
+    <scroll-view scroll-y="true" class="list" bindscrolltolower="handleLoadMore" enable-back-to-top="true">
+        <template is="person-item1" data="{{ item }}" wx:for="{{ persons }}" wx:key="{{ item.id }}"/>
+        <view class="tips">
+            <view wx:if="{{ reqfail }}" bindtap="handleLoadMore">
+                <text>加载失败了,点这重试吧</text>
+            </view>
+            <view wx:elif="{{ hasMore }}">
+                <image src="../../images/ibee360_loading1.gif" mode="aspectFill"/>
+                <text>努力加载中...</text>
+            </view>
+            <view wx:elif="{{ !hasMore }}">
+                <text>没有更多内容了</text>
+            </view>
+        </view>
+    </scroll-view>
+</template>
+
+<template name="price-item-common">
+    <text class="instr">预计推广效果</text>
+    <view class="other">
+        <text class="click-total">阅读数 {{item.click_count}}</text>
+        <text class="fans-total">覆盖粉丝数 {{item.fans}}</text>
+    </view>
+</template>
+
+<template name="price-hard-item">
+    <view wx:if="{{ hard_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">单图文硬广</text>
+        <text class="cost">¥{{hard_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-hard-item1">
+    <view wx:if="{{ first_hard_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">多图文头条硬广</text>
+        <text class="cost">¥{{first_hard_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-hard-item2">
+    <view wx:if="{{ second_hard_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">多图文第二条硬广</text>
+        <text class="cost">¥{{second_hard_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-hard-item3">
+    <view wx:if="{{ large_hard_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">多图文第3-N条硬广</text>
+        <text class="cost">¥{{large_hard_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-soft-item">
+    <view wx:if="{{ soft_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">单图文软广</text>
+        <text class="cost">¥{{soft_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-soft-item1">
+    <view wx:if="{{ first_soft_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">多图文头条软广</text>
+        <text class="cost">¥{{first_soft_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-soft-item2">
+    <view wx:if="{{ second_soft_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">多图文第二条软广</text>
+        <text class="cost">¥{{second_soft_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-soft-item3">
+    <view wx:if="{{ large_soft_paper_price != null }}" class="price-item">
+      <view class="section1">
+        <text class="name">多图文第3-N条软广</text>
+        <text class="cost">¥{{large_soft_paper_price}}</text>
+      </view>
+      <template is="price-item-common" data="{{ item }}"/>
+    </view>
+</template>
+
+<template name="price-list">
+    <view class="">
+        <template is="price-hard-item" data="{{ item, hard_paper_price }}"/>
+        <template is="price-hard-item1" data="{{ item, first_hard_paper_price }}"/>
+        <template is="price-hard-item2" data="{{ item, second_hard_paper_price }}"/>
+        <template is="price-hard-item3" data="{{ item, large_hard_paper_price }}"/>
+        <template is="price-soft-item" data="{{ item, soft_paper_price }}"/>
+        <template is="price-soft-item1" data="{{ item, first_soft_paper_price }}"/>
+        <template is="price-soft-item2" data="{{ item, second_soft_paper_price }}"/>
+        <template is="price-soft-item3" data="{{ item, large_soft_paper_price }}"/>
+    </view>
+</template>
+
+<template name="detail-loading-cover">
+    <view class="load-cover" wx:if="{{ loading || reqfail }}">
+        <view class="load-cover-wrap" wx:if="{{ loading }}">
+            <image src="../../images/ibee360_loading1.gif" mode="aspectFill"/>
+            <text>努力加载中...</text>
+        </view>
+        <view class="load-cover-wrap" wx:if="{{ reqfail }}">
+            <text bindtap="getIteminfo">加载失败了,点这重试吧</text>
+        </view>
+    </view>
+</template>

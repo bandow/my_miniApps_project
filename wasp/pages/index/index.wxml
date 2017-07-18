@@ -1,10 +1,40 @@
-<!--index.wxml-->
+<!--
+    zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="header">
+    <image class="bee-up" src="../../images/bee_up.png" mode="widthFix"></image>
+    <image class="bee-down" src="../../images/bee_down.png" mode="widthFix"></image>
+    <image class="logoimg" src="../../images/logo1.png" mode="widthFix"></image>
+    <view class="search">
+      <input placeholder="输入公众号查最新报价" bindinput="bindInput"></input>
+      <view bindtap="bindSrchBtnTap">
+        <image class="search-btn" src="../../images/ic_sear1.png" mode="widthFix"></image>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <text class="linkers-title">其他超值传播包</text>
+  <view class="linkers">
+    <view class="linker-wrap">
+      <image id="linker-tech" src="../../images/ic_go_01.png" mode="widthFix" bindtap="bindLinkerTap" data-type="1"></image>
+      <text>科技</text>
+    </view>
+    <view class="linker-wrap">
+      <image id="linker-star" src="../../images/ic_go_02.png" mode="widthFix" bindtap="bindLinkerTap" data-type="2"></image>
+      <text>明星</text>
+    </view>
+    <view class="linker-wrap">
+      <image id="linker-zhihu" src="../../images/ic_go_03.png" mode="widthFix" bindtap="bindLinkerTap" data-type="3"></image>
+      <text>知乎</text>
+    </view>
+    <view class="linker-wrap">
+      <image id="linker-taobao" src="../../images/ic_go_04.png" mode="widthFix" bindtap="bindLinkerTap" data-type="4"></image>
+      <text>淘宝</text>
+    </view>
+    <view class="linker-wrap">
+      <image id="linker-foreign" src="../../images/ic_go_05.png" mode="widthFix" bindtap="bindLinkerTap" data-type="5"></image>
+      <text>海外</text>
+    </view>
   </view>
+  <image class="footerlogo" src="../../images/logo4.png" mode="widthFix"></image>
 </view>

@@ -1,0 +1,94 @@
+/**
+ *  zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+ */
+@import "../common/common.wxss";
+
+.package-item{
+    margin:0;
+    background:#fff;
+}
+.package-header{
+    position:relative;
+    /*height:140rpx;*/
+    padding:20rpx 0 10rpx 130rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.package-header .header-avatar{
+    position:absolute;
+    width: 85rpx;
+    height: 85rpx;
+    top: 30rpx;
+    left: 25rpx;
+    background:#fff;
+    border-radius:85rpx;
+    border:0px solid #aaa;
+}
+.package-header .header-name{
+    font-size:32rpx;
+    font-weight: bold;
+}
+.package-header .header-desc,
+.package-header .header-price,
+.package-content .content-desc,
+.package-content .content-effect,
+.poreign-proj .proj-desc,
+.star-person .person-weibofans{
+    color:#aaa;
+}
+.package-header .header-desc{
+    font-size:28rpx;
+}
+.package-header .header-price{
+    font-size:26rpx;
+}
+.package-content{
+    padding:10rpx 60rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.package-content .content-name{
+    font-size:32rpx;
+    color:#000;
+}
+.package-content .content-desc{
+    font-size:28rpx;
+}
+.package-content .content-effect{
+     font-size:24rpx;    
+}
+.poreign-proj{
+     padding:0;
+}
+.poreign-proj .proj-name{
+    font-size:28rpx;
+    color:#000;
+}
+.poreign-proj .proj-desc{
+    font-size:24rpx;
+}
+.star-persons{
+    border-bottom: 1rpx solid #eee;
+    padding:10rpx 60rpx 30rpx;
+}
+.star-person{
+    position:relative;
+    display:inline-flex;
+    flex-direction:column;
+    width:calc(50% - 130rpx);
+    padding:25rpx 20rpx 10rpx 110rpx;
+}
+.star-person .person-avatar{
+    position:absolute;
+    width: 85rpx;
+    height: 85rpx;
+    top: 20rpx;
+    left: 0rpx;
+    background:#aaa;
+    border-radius:85rpx;
+}
+.star-person .person-name{
+    font-size:28rpx;
+    color:#000;
+}
+.star-person .person-weibofans{
+    font-size:24rpx;
+}

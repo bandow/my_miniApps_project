@@ -1,0 +1,62 @@
+/**
+ *  zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+ */
+@import "../common/common.wxss";
+
+.package-item{
+    margin:0;
+    background:#fff;
+}
+.package-header{
+    position:relative;
+    /*height:150rpx;*/
+    padding:20rpx 60rpx 10rpx 130rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.package-header .next{
+    position:absolute;
+    top: calc(50% - 15rpx);
+    right: 25rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+.package-header .header-avatar{
+    position:absolute;
+    width: 85rpx;
+    height: 85rpx;
+    top: 30rpx;
+    left: 25rpx;
+    background:#fff;
+    border-radius:85rpx;
+    border:0px solid #aaa;
+}
+.package-header .header-name{
+    font-size:32rpx;
+    font-weight: bold;
+}
+.package-header .header-desc,
+.package-header .header-price,
+.package-header .header-apply,
+.package-content .content-desc,
+.package-content .content-effect,
+.poreign-proj .proj-desc,
+.star-person .person-weibofans{
+    color:#aaa;
+}
+.package-header .header-desc{
+    font-size:28rpx;
+}
+.package-header .header-price{
+    font-size:28rpx;
+}
+.package-header .header-apply{
+    margin-top:10rpx;
+    line-height:40rpx;
+}
+.package-header .header-apply text{
+    display:inline;
+    font-size:28rpx;
+}
+.package-header .header-apply text:last-of-type{
+    margin-left:40rpx;
+}

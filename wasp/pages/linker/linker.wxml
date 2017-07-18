@@ -1,0 +1,72 @@
+<!--
+    zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+-->
+<template name="foreign-proj">
+  <view class="poreign-proj">
+    <text class="proj-name">{{proj.name}}</text>
+    <text class="proj-desc">{{proj.desc}}</text>
+  </view>
+</template>
+
+<template name="star-person">
+   <view class="star-person">
+    <image class="person-avatar" src="{{person.avatar}}"></image>
+    <view class="person-name">{{person.name}}</view>
+    <view class="person-weibofans">微博粉丝:{{person.weibofans}}</view>
+   </view>
+</template>
+
+<template name="content-default">
+  <view class="package-content" >
+    <text class="content-name">{{content.name}}</text>
+    <text class="content-desc">{{content.desc}}</text>
+    <text class="content-effect">{{content.effect}}</text>
+  </view>
+</template>
+
+<template name="content-foreign">
+    <view class="package-content" >
+        <text class="content-name">{{content.name}}</text>
+        <view class="foreign-projs">
+            <template is="foreign-proj" data="{{ proj }}" wx:for="{{content.projs}}" wx:for-item="proj"/>
+        </view>
+    </view>
+</template>
+
+<template name="content-star">
+    <view class="package-content" >
+        <text class="content-name">{{content.name}}</text>
+        <text class="content-desc">{{content.desc}}</text>
+        <text class="content-effect">{{content.effect}}</text>
+    </view>
+    <view class="star-persons">
+        <template is="star-person" data="{{ person }}" wx:for="{{content.persons}}" wx:for-item="person" />
+    </view>
+</template>
+
+<view class="container">
+    <scroll-view scroll-y="true" class="list" enable-back-to-top="true">
+        <view class="package-item" wx:for="{{ packages }}" wx:for-item="package">
+            <view class="package-header">
+                <image class="header-avatar" src="{{package.avatar}}"></image>
+                <text class="header-name">{{package.name}}</text>
+                <text class="header-desc">{{package.desc}}</text>
+                <text class="header-price">{{package.price}}</text>
+            </view>
+            <view class="package-contents">
+                <block wx:if="{{ ptype == PACKTYPE.TECH || ptype == PACKTYPE.ZHIHU || ptype ==  PACKTYPE.TAOBAO}}">
+                    <template is="content-default" data="{{ content }}" wx:for="{{ package.contents }}" wx:for-item="content"/>
+                </block>
+                <block wx:if="{{ ptype == PACKTYPE.STAR }}">
+                    <template is="content-star" data="{{ content }}" wx:for="{{ package.contents }}" wx:for-item="content"/>
+                </block>
+                <block wx:if="{{ ptype == PACKTYPE.FOREIGN }}">
+                    <template is="content-foreign" data="{{ content }}" wx:for="{{ package.contents }}" wx:for-item="content"/>
+                </block>
+            </view>
+        </view>
+        <view class="contact-btn">
+            <button bindtap="setupCall">立即推广 (020-38615453)</button>
+        </view>
+    </scroll-view>
+</view>

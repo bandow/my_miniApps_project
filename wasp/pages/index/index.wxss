@@ -1,21 +1,134 @@
+/**
+ *  zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+ */
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.text-black-bg-fed426-color{
+  color:#fed426;
+  background:black;
+}
+.text-black-color-fed426-bg{
+  color:black;
+  background:#fed426;
+}
+.container{
+  position:relative;
+  display:inherit;
+  padding: 0;
+  font-size: 14rpx;
+  background: #fed426;
+  color: #999999;
+}
+.container .header{
+  position:relative;
+  height:62vh;
+  text-align:center;
+  background:#fff;
+}
+.container .header .logoimg{
+  display:block;
+  padding-top:16vh;
+  padding-bottom:0rpx;
+  margin:auto;
+  width:420rpx;
+  height:auto;
+}
+.container .search{
+  position:relative;
+  margin:6vh 75rpx 0 75rpx;
+  padding-right:98rpx;
+  background: #fff;
+  border:5rpx solid #fed426;
+}
+/*
+.container .header{
+  position:relative;
+  height:750rpx;
+  text-align:center;
+  background:#fff;
+}
+.container .header .logoimg{
+  display:block;
+  padding-top:175rpx;
+  padding-bottom:0rpx;
+  margin:auto;
+  width:420rpx;
+  height:auto;
+}
+.container .search{
+  position:relative;
+  margin:78rpx 75rpx 60rpx 75rpx;
+  padding-right:98rpx;
+  background: #fff;
+  border:5rpx solid #fed426;
+}
+*/
+.container .header .bee-up{
+  position:absolute;
+  top:0;
+  left:0;
+  width:130rpx;
+}
+.container .header .bee-down{
+  position:absolute;
+  bottom:5rpx;
+  right:0;
+  width:130rpx;
+}
+.container .search input{
+  height: 88rpx;
+  padding-left:30rpx;
+  padding-right:0;
+  font-size: 38rpx;
+  background:#fff;
+  color:#a0a0a0;
+  text-align:left;
+}
+.container .search view{
+  position:absolute;
+  top:0;
+  right:0;
+  width:98rpx;
+  height:88rpx;
+}
+.container .search image{
+  position:absolute;
+  width:60rpx;
+  height:auto;
+  top:calc(50% - 30rpx);
+  right:calc(50rpx - 30rpx);
+}
+.container .linkers-title{
+  padding:30rpx 0 20rpx 85rpx;
+  font-size:30rpx;
+  font-weight:bold;
+  color:#000;
+}
+.container .linkers{
+  display:flex;
+  justify-content: space-between;
+  padding:0 85rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.container .linkers image{
+  width:100rpx;
+  height:auto;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.container .linkers .linker-wrap{
+  text-align:center;
+  color:#333;
 }
-
-.usermotto {
-  margin-top: 200px;
+.container .linkers .linker-wrap text{
+  font-size:24rpx;
+  font-weight:bold;
+}
+.container .footerlogo{
+  position:absolute;
+  left:calc(50% - 210rpx);
+  bottom:45rpx;
+  width:420rpx;
+}
+.search-placeholder{
+  color: #8CCEFD;
+  line-height: 20rpx;
 }

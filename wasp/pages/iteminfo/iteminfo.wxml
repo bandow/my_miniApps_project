@@ -1,0 +1,17 @@
+<!--
+    zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+-->
+<!--pages/iteminfo/iteminfo.wxml-->
+<import src="../common/common"/>
+<view class="container">
+  <view class="header">
+    <template is="person-item2" data="{{ item }}"/>
+  </view>
+  <scroll-view scroll-y="true" class="list"  enable-back-to-top="true">
+    <template is="price-list" data="{{ item, hard_paper_price, first_hard_paper_price, second_hard_paper_price, large_hard_paper_price,soft_paper_price,first_soft_paper_price,second_soft_paper_price,large_soft_paper_price }}"/>
+    <view class="contact-btn">
+      <button bindtap="setupCall">立即推广 (020-38615453)</button>
+    </view>
+  </scroll-view>
+</view>
+<template is="detail-loading-cover" data="{{ loading, reqfail }}" />

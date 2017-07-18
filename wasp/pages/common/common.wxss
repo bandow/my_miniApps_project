@@ -1,0 +1,159 @@
+/**
+ *  zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+ */
+.list{
+    height: 100%;
+}
+.list .navigator-hover{
+    background:#fff6f7;
+}
+.person-item{
+    position:relative;
+    padding: 16rpx 52px 10rpx 66px;
+    border-bottom: 1rpx solid #eee;
+    height:140rpx;
+    cursor: pointer;
+    background:#fff;
+}
+.person-item .avatar {
+    position:absolute;
+    width: 46px;
+    height: 46px;
+    top: 20rpx;
+    left: 10px;
+    border-radius:42px;
+}
+.person-item .meta {
+    flex: 1;
+}
+.person-item .meta .nickname,
+.person-item .meta .account,
+.person-item .meta .other {
+    display: block;
+}
+.person-item .meta .nickname {
+    margin-bottom:2rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color:#000000;
+}
+.person-item .meta .account {
+    margin-bottom: 2rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+.person-item .meta .other .fans-total,
+.person-item .meta .other .click-total {
+    display:inline-block;
+    font-size: 24rpx;
+    color: #999;
+}
+.person-item .meta .other .click-total{
+    margin-left: 20px;
+}
+.person-item .next{
+    position:absolute;
+    top: calc(50% - 8px);
+    right: 20px;
+    width: 16px;
+    height: 16px;
+}
+.list .tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding:40rpx 50rpx;
+  color: #ccc;
+}
+.list .tips image,
+.list .tips text {
+  vertical-align: middle;
+}
+.list .tips image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.price-item{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    padding: 24rpx 20px 20rpx 28px;
+    border-bottom: 1rpx solid #eee;
+    cursor: pointer;
+    background:#fff;
+}
+.price-item .section1{
+    display:flex;
+    justify-content:space-between;
+}
+.price-item .name,
+.price-item .cost{
+    color:#b5352c;
+    font-size:16px;
+    font-weight:bold;
+}
+.price-item .instr{
+    margin-top:18rpx;
+    padding:0em 0.6em;
+    width:6em;
+    color:#fff;
+    font-size:24rpx;
+    background:#5c5a5b;
+}
+.price-item .other{
+    margin-top:10rpx;
+}
+.price-item .other .fans-total,
+.price-item .other .click-total {
+    display:inline-block;
+    font-size: 24rpx;
+    color: #999;
+}
+.price-item .other .fans-total{
+    margin-left: 20px;
+}
+
+.load-cover{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+    z-index:888;
+    /*height:220rpx;*/
+}
+.load-cover-wrap{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color: #ccc;
+}
+.load-cover image,
+.load-cover text {
+  vertical-align: middle;
+}
+.load-cover image {
+width:80rpx;
+height:80rpx;
+margin-top:-60px;
+margin-bottom:10px;
+
+}
+
+.contact-btn{
+    margin:70rpx auto;
+    text-align:center;
+}
+
+/** 修改button默认的点击态样式类**/
+.contact-btn button{
+  width:550rpx;
+  font-size:40rpx;
+  font-weight:bold;
+  background-color: #fed428;
+}

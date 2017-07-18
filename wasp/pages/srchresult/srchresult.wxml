@@ -1,0 +1,9 @@
+<!--
+    zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+-->
+<!--pages/srchresult/srchresult.wxml-->
+<import src="../common/common"/>
+<view class="container">
+  <template is="person-list" data="{{ persons, loading, hasMore, reqfail }}"/>
+</view>
+

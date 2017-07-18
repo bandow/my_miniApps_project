@@ -1,0 +1,14 @@
+/**
+ *  zhoujianheng @ Shanghai Hanyun Info Tech Corp.
+ */
+/* pages/iteminfo/iteminfo.wxss */
+@import "../common/common.wxss";
+
+.list{
+  margin-top:165rpx;
+  height:calc(100% - 165rpx);
+}
+.header{
+  position:fixed;
+  width:100%;
+}
