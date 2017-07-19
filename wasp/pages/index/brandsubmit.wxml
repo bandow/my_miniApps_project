@@ -1,0 +1,76 @@
+<!--pages/index/submit.wxml-->
+<view class="container">
+    <view class="submit-list">
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter1_icon.png" mode="widthFix"></image>
+          </view>
+          <text>联\r\r\r系 \r\r\r人</text>
+          <view class="input-line">
+            <input placeholder="请输入真实名字" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter2_icon.png" mode="widthFix"></image>
+          </view>
+          <text>联系电话</text>
+          <view class="input-line">
+            <input placeholder="请输入手机号码或座机" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter3_icon.png" mode="widthFix"></image>
+          </view>
+          <text>微\r\r\r信\r\r\r号</text>
+          <view class="input-line">
+            <input placeholder="请输入微信号" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter7_icon.png" mode="widthFix"></image>
+          </view>
+          <text>公司名称</text>
+          <view class="input-line">
+            <input placeholder="请输入公司名称" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter8_icon.png" mode="widthFix"></image>
+          </view>
+          <text>推广单品</text>
+          <view class="input-line">
+            <input placeholder="请输入推广单品" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter9_icon.png" mode="widthFix"></image>
+          </view>
+          <text>推广单价</text>
+          <view class="input-line">
+            <input placeholder="请输入推广单品" placeholder-class="plaColor" />
+          </view>
+          <text>元</text>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter10_icon.png" mode="widthFix"></image>
+          </view>
+          <text>分成比例</text>
+          <view class="input-line">
+            <input placeholder="85%" placeholder-class="plaColor" />
+          </view>
+        </view>
+    </view>
+    <view class="footer">
+      <view class="btn" catchtap="btn1">
+        <text>提交审核</text>
+      </view>
+      <view class="img"><image src="../../images/contact.png" mode="widthFix"></image></view>
+    </view>
+</view>
+

@@ -1,0 +1,66 @@
+<!--pages/index/submit.wxml-->
+<view class="container">
+    <view class="submit-list">
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter1_icon.png" mode="widthFix"></image>
+          </view>
+          <text>联\r\r\r系 \r\r\r人</text>
+          <view class="input-line">
+            <input placeholder="请输入真实名字" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter2_icon.png" mode="widthFix"></image>
+          </view>
+          <text>联系电话</text>
+          <view class="input-line">
+            <input placeholder="请输入手机号码或座机" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter3_icon.png" mode="widthFix"></image>
+          </view>
+          <text>微\r\r\r信\r\r\r号</text>
+          <view class="input-line">
+            <input placeholder="请输入微信号" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter4_icon.png" mode="widthFix"></image>
+          </view>
+          <text>公众号名</text>
+          <view class="input-line">
+            <input placeholder="请输入公众号名称" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter5_icon.png" mode="widthFix"></image>
+          </view>
+          <text>公众账号</text>
+          <view class="input-line">
+            <input placeholder="请输入公众号账号" placeholder-class="plaColor" />
+          </view>
+        </view>
+        <view class="item">
+          <view class="img">
+            <image src="../../images/enter6_icon.png" mode="widthFix"></image>
+          </view>
+          <text>粉\r\r\r丝\r\r\r量</text>
+          <view class="input-line">
+            <input placeholder="请输入具体数值" placeholder-class="plaColor" />
+          </view>
+          <text>人</text>
+        </view>
+    </view>
+    <view class="footer">
+      <view class="btn" catchtap="btn1">
+        <text>提交审核</text>
+      </view>
+      <view class="img"><image src="../../images/contact.png" mode="widthFix"></image></view>
+    </view>
+</view>

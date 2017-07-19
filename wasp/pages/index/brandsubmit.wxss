@@ -1,0 +1,68 @@
+/* pages/index/brandsubmit.wxss */
+page{
+    background:#f7f7f7;
+}
+.container .submit-list{
+   padding-top:20%; 
+}
+.container .submit-list .item{
+    margin:0 auto;
+    width:80%;
+    display:flex;
+    align-items:center;
+    margin-bottom:50rpx;
+}
+.submit-list .item .img{
+    width:36rpx;
+    margin-right:15rpx;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.submit-list .item .img image{
+    width:100%;
+}
+.submit-list .item text{
+    font-size:30rpx;
+    color:#4e4e4e;   
+}
+.submit-list .item text:nth-child(2){
+    width:130rpx;
+}
+.input-line{
+    margin-left:15rpx;
+    border-bottom:1px solid #ccc;
+    flex:1;
+    font-size:28rpx;
+    color:#4e4e4e;
+}
+.plaColor{
+    color:#ccc;
+    font-size:26rpx;
+}
+.footer .btn{
+  margin:30rpx auto 50rpx;
+  width:70%;
+  height:80rpx;
+  line-height:80px;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  border-radius:5px;
+  background: -webkit-linear-gradient(top, #fedf5f 0%,#e3b806 100%);
+  background: linear-gradient(to bottom, #fedf5f 0%,#e3b806 100%);
+  box-shadow:1px 1px 1px #cca400,-1px 5px 1px #cca400;
+}
+.footer .btn text{
+    text-align:center;
+    color:#393939;
+    display:block;
+    width:100%;
+}
+.footer .img{
+    margin:0 auto 20rpx;
+    width:85%;
+}
+.footer .img image{
+    width:100%;
+}

@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/index/mallDrainage",
+    "pages/index/submit",
+    "pages/index/brandsubmit",
+    "pages/index/submitsuccess",
     "pages/linker/linker",
     "pages/packlist/packlist",
     "pages/packitem/packitem",
