@@ -67,9 +67,9 @@
         </view>
     </view>
     <view class="footer">
-      <view class="btn" catchtap="btn1">
+      <button class="btn" catchtap="btn1">
         <text>提交审核</text>
-      </view>
+      </button>
       <view class="img"><image src="../../images/contact.png" mode="widthFix"></image></view>
     </view>
 </view>
